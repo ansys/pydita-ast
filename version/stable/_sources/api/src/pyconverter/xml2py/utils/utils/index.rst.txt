@@ -1,0 +1,305 @@
+
+
+
+
+
+
+The ``utils.py`` module
+=======================
+
+.. py:module:: src.pyconverter.xml2py.utils.utils
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: utils
+.. tab-set::
+
+
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~parse_yaml`
+            - Parse a YAML file.
+
+
+          * - :py:obj:`~get_config_data_value`
+            - Return the value of a specific key in the YAML file.
+
+
+          * - :py:obj:`~create_name_map`
+            - Create a mapping between the initial command name and the Python function name.
+
+
+          * - :py:obj:`~import_handler`
+            - Handle the imports in the Python file.
+
+
+          * - :py:obj:`~split_trail_alpha`
+            - Split a string based on the last tailing non-alphanumeric character.
+
+
+          * - :py:obj:`~is_numeric`
+            - Return ``True`` when a string is numeric.
+
+
+          * - :py:obj:`~get_refentry`
+            - Get the reference entry from an XML file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: parse_yaml(yaml_path: pathlib.Path) -> dict
+
+   
+   Parse a YAML file.
+
+
+   :Parameters:
+
+       **yaml_path: Path**
+           Path object of the YAML file.
+
+
+
+   :Returns:
+
+       :class:`python:dict`
+           Dictionary with the content of the YAML file.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_config_data_value(yaml_path: pathlib.Path, value: str) -> Union[str, dict, list, None]
+
+   
+   Return the value of a specific key in the YAML file.
+
+
+   :Parameters:
+
+       **yaml_path: Path**
+           Path object of the YAML file.
+
+       **value: str**
+           Key to search for in the YAML file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: create_name_map(meta_command: list[str], yaml_file_path: pathlib.Path) -> dict
+
+   
+   Create a mapping between the initial command name and the Python function name.
+
+
+   :Parameters:
+
+       **meta_command: list[str]**
+           List of command names.
+
+       **yaml_file_path: Path**
+           Path object of the YAML file.
+
+
+
+   :Returns:
+
+       :class:`python:dict`
+           Dictionary with the following format: ``{"initial_command_name": "python_name"}``.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: import_handler(filename: pathlib.Path, additional_content: str, str_before_def: str) -> None
+
+   
+   Handle the imports in the Python file.
+
+
+   :Parameters:
+
+       **filename: Path**
+           Path object of the Python file.
+
+       **additional_content: str**
+           Additional content to add to the Python file.
+
+       **str_before_def: str**
+           String before the function definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: split_trail_alpha(text: str) -> Tuple[str, str]
+
+   
+   Split a string based on the last tailing non-alphanumeric character.
+
+
+   :Parameters:
+
+       **text: str**
+           String to split.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: is_numeric(text: str) -> bool
+
+   
+   Return ``True`` when a string is numeric.
+
+
+   :Parameters:
+
+       **text: str**
+           String to check.
+
+
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           ``True`` if the string is numeric.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_refentry(filename: pathlib.Path) -> list
+
+   
+   Get the reference entry from an XML file.
+
+
+   :Parameters:
+
+       **filename: Path**
+           Path object of an XML file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+

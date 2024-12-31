@@ -1,0 +1,6 @@
+py\_returns
+===========
+
+.. currentmodule:: pyconverter.xml2py.custom_functions
+
+.. autoproperty:: CustomFunctions.py_returns

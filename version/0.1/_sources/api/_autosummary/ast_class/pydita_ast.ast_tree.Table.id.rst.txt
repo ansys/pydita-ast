@@ -1,0 +1,6 @@
+id
+==
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Table.id

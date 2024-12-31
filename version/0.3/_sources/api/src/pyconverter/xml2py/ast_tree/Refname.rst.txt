@@ -1,0 +1,142 @@
+
+
+:class:`Refname`
+================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Refname(element, terms=None)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the refname element which contains
+   the name of a reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Refname
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~terms`
+            - Terms of the element.
+          * - :py:attr:`~raw_args`
+            - Raws containing the command arguments.
+          * - :py:attr:`~args`
+            - Command arguments.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Refname
+
+Property detail
+---------------
+.. py:property:: terms
+   
+   Terms of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: raw_args
+   
+   Raws containing the command arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: args
+   
+   Command arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+

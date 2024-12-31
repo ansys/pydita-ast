@@ -1,0 +1,6 @@
+path
+====
+
+.. currentmodule:: pyconverter.xml2py.custom_functions
+
+.. autoproperty:: CustomFunctions.path

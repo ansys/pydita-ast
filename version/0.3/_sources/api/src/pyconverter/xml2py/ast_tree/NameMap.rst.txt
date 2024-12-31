@@ -1,0 +1,53 @@
+
+
+:class:`NameMap`
+================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.NameMap(name_map)
+
+
+.. py:currentmodule:: NameMap
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~name_map`
+            - 
+          * - :py:attr:`~NAME_MAP_GLOB`
+            - 
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import NameMap
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: name_map
+
+.. py:attribute:: NAME_MAP_GLOB
+
+
+
+

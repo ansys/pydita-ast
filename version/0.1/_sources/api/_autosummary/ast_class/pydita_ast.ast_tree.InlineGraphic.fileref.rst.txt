@@ -1,0 +1,6 @@
+fileref
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: InlineGraphic.fileref

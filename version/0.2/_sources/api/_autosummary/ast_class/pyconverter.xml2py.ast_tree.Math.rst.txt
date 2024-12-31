@@ -1,0 +1,66 @@
+﻿Math
+====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Math
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Math.find
+      
+      
+      Math.find_all
+      
+      
+      Math.get
+      
+      
+      Math.has_children
+      
+      
+      Math.print_tree
+      
+      
+      Math.rec_find
+      
+      
+      Math.to_rst
+      
+      
+      Math.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Math.added
+      Math.any_isalnum
+      Math.children
+      Math.content
+      Math.equation
+      Math.id
+      Math.next_elem
+      Math.prev_elem
+      Math.raw
+      Math.tag
+      Math.tail
+      Math.text_content
+      Math.title
+      Math.tostring
+   
+   

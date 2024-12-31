@@ -1,0 +1,6 @@
+tgroup
+======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Table.tgroup

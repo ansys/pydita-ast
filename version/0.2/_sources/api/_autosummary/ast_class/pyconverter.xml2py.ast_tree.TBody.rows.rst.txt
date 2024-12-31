@@ -1,0 +1,6 @@
+rows
+====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: TBody.rows

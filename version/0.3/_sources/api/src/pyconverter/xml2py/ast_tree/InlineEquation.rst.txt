@@ -1,0 +1,127 @@
+
+
+:class:`InlineEquation`
+=======================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.InlineEquation(element)
+
+   Bases: :py:obj:`_Math`
+
+
+   
+   Provides the inline equation element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InlineEquation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~tail`
+            - Return the tail of the element as a string.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import InlineEquation
+
+Property detail
+---------------
+.. py:property:: tail
+   
+   Return the tail of the element as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

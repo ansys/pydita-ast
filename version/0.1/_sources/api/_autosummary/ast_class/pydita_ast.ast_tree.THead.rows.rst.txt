@@ -1,0 +1,6 @@
+rows
+====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: THead.rows

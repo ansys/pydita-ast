@@ -1,0 +1,6 @@
+﻿multireplace
+============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autofunction:: multireplace

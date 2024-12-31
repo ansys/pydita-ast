@@ -1,0 +1,66 @@
+﻿THead
+=====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: THead
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      THead.find
+      
+      
+      THead.find_all
+      
+      
+      THead.get
+      
+      
+      THead.has_children
+      
+      
+      THead.print_tree
+      
+      
+      THead.rec_find
+      
+      
+      THead.to_rst
+      
+      
+      THead.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      THead.added
+      THead.any_isalnum
+      THead.children
+      THead.content
+      THead.id
+      THead.next_elem
+      THead.prev_elem
+      THead.raw
+      THead.rows
+      THead.tag
+      THead.tail
+      THead.text_content
+      THead.title
+      THead.tostring
+   
+   

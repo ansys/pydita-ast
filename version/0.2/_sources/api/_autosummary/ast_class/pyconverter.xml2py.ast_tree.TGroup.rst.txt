@@ -1,0 +1,69 @@
+﻿TGroup
+======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: TGroup
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      TGroup.find
+      
+      
+      TGroup.find_all
+      
+      
+      TGroup.get
+      
+      
+      TGroup.has_children
+      
+      
+      TGroup.print_tree
+      
+      
+      TGroup.rec_find
+      
+      
+      TGroup.to_rst
+      
+      
+      TGroup.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      TGroup.added
+      TGroup.any_isalnum
+      TGroup.children
+      TGroup.content
+      TGroup.id
+      TGroup.n_col
+      TGroup.next_elem
+      TGroup.prev_elem
+      TGroup.raw
+      TGroup.row_in_tbody
+      TGroup.tag
+      TGroup.tail
+      TGroup.tbody
+      TGroup.text_content
+      TGroup.thead
+      TGroup.title
+      TGroup.tostring
+   
+   

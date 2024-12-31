@@ -1,0 +1,66 @@
+﻿OxygenXmlTree
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: OxygenXmlTree
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      OxygenXmlTree.find
+      
+      
+      OxygenXmlTree.find_all
+      
+      
+      OxygenXmlTree.get
+      
+      
+      OxygenXmlTree.has_children
+      
+      
+      OxygenXmlTree.print_tree
+      
+      
+      OxygenXmlTree.rec_find
+      
+      
+      OxygenXmlTree.to_rst
+      
+      
+      OxygenXmlTree.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      OxygenXmlTree.added
+      OxygenXmlTree.any_isalnum
+      OxygenXmlTree.children
+      OxygenXmlTree.content
+      OxygenXmlTree.id
+      OxygenXmlTree.next_elem
+      OxygenXmlTree.prev_elem
+      OxygenXmlTree.raw
+      OxygenXmlTree.tag
+      OxygenXmlTree.tail
+      OxygenXmlTree.text_content
+      OxygenXmlTree.title
+      OxygenXmlTree.tostring
+      OxygenXmlTree.xml_filename
+   
+   

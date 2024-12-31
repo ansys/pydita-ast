@@ -1,0 +1,34 @@
+﻿CustomFunctions
+===============
+
+.. currentmodule:: pyconverter.xml2py.custom_functions
+
+.. autoclass:: CustomFunctions
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      CustomFunctions.lib_import
+      CustomFunctions.path
+      CustomFunctions.py_code
+      CustomFunctions.py_examples
+      CustomFunctions.py_names
+      CustomFunctions.py_returns
+   
+   

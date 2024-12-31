@@ -1,0 +1,75 @@
+
+
+:class:`Refpurpose`
+===================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Refpurpose(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the refpurpose element, which contains
+   a short synopsis of a reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: Refpurpose
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Refpurpose
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: __repr__()
+
+

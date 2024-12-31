@@ -1,0 +1,128 @@
+
+
+
+
+
+
+The ``custom_functions.py`` module
+==================================
+
+.. py:module:: src.pyconverter.xml2py.custom_functions
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: custom_functions
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.custom_functions.CustomFunctions`
+            - Provides for creating customized functions.
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~get_docstring_lists`
+            - Get lists of strings depending on Python file sections.
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CustomFunctions</api/src/pyconverter/xml2py/custom_functions/CustomFunctions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: get_docstring_lists(filename: str) -> Tuple[list[str], list[str], list[str], list[str]]
+
+   
+   Get lists of strings depending on Python file sections.
+
+
+   :Parameters:
+
+       **filename: str**
+           Path containing the Python file.
+
+
+
+   :Returns:
+
+       :obj:`List`\[:class:`python:str`]
+           List containing the docstring ``Returns`` section.
+
+       :obj:`List`\[:class:`python:str`]
+           List containing the docstring ``Examples`` section.
+
+       :obj:`List`\[:class:`python:str`]
+           List containing the source code.
+
+       :obj:`List`\[:class:`python:str`]
+           List containing the library import section.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+

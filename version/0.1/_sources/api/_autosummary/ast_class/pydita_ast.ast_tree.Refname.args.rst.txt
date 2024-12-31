@@ -1,0 +1,6 @@
+args
+====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Refname.args

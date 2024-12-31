@@ -1,0 +1,6 @@
+﻿is\_numeric
+===========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autofunction:: is_numeric

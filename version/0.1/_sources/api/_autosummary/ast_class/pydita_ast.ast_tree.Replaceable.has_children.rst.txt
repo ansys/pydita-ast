@@ -1,0 +1,6 @@
+has\_children
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Replaceable.has_children

@@ -1,0 +1,6 @@
+﻿get\_docstring\_lists
+=====================
+
+.. currentmodule:: pyconverter.xml2py.custom_functions
+
+.. autofunction:: get_docstring_lists

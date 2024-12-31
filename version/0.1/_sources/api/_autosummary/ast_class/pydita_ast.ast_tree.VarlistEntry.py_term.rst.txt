@@ -1,0 +1,6 @@
+py\_term
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: VarlistEntry.py_term

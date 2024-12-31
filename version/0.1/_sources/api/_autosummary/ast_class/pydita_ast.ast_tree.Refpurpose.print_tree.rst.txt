@@ -1,0 +1,6 @@
+print\_tree
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Refpurpose.print_tree

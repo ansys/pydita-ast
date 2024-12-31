@@ -1,0 +1,65 @@
+﻿InformalTable
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: InformalTable
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      InformalTable.find
+      
+      
+      InformalTable.find_all
+      
+      
+      InformalTable.get
+      
+      
+      InformalTable.has_children
+      
+      
+      InformalTable.print_tree
+      
+      
+      InformalTable.rec_find
+      
+      
+      InformalTable.to_rst
+      
+      
+      InformalTable.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      InformalTable.added
+      InformalTable.any_isalnum
+      InformalTable.children
+      InformalTable.content
+      InformalTable.id
+      InformalTable.next_elem
+      InformalTable.prev_elem
+      InformalTable.raw
+      InformalTable.tag
+      InformalTable.tail
+      InformalTable.text_content
+      InformalTable.title
+      InformalTable.tostring
+   
+   

@@ -1,0 +1,6 @@
+rec\_find
+=========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Screen.rec_find

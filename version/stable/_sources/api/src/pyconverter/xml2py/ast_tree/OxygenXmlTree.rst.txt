@@ -1,0 +1,106 @@
+
+
+:class:`OxygenXmlTree`
+======================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.OxygenXmlTree(filename, meta_only=False)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides for loading an XML file as an AST (abstract syntax tree).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OxygenXmlTree
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~xml_filename`
+            - Source filename of the command.
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~root`
+            - 
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import OxygenXmlTree
+
+Property detail
+---------------
+.. py:property:: xml_filename
+   
+   Source filename of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: root
+
+
+
+

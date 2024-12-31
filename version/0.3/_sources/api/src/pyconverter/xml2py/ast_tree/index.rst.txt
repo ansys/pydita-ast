@@ -1,0 +1,1138 @@
+
+
+
+
+
+
+The ``ast_tree.py`` module
+==========================
+
+.. py:module:: src.pyconverter.xml2py.ast_tree
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ast_tree
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.NameMap`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Element`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ItemizedList`
+            - Provides the itemized list element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.SimpleList`
+            - Provides the simple itemized list element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Member`
+            - Provides the member element for a simple itemized list.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.OrderedList`
+            - Provides the ordered list element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ListItem`
+            - Provides the list item element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.FileName`
+            - Provides the filename element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.OLink`
+            - Provides the external link element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Paragraph`
+            - Provides the paragraph element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Phrase`
+            - Provides the phrase element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Structname`
+            - Provides the structure name element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Title`
+            - Provides the title element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Emphasis`
+            - Provides the emphasis element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Example`
+            - Provides the example element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InformalExample`
+            - Provides the informal example element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.GuiMenu`
+            - Provides the GUI menu element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Replaceable`
+            - Provides the replaceable element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ProgramListing`
+            - Provides the program listing element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Variablelist`
+            - Provides the variable list.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.RefSection`
+            - Provides the reference section element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.VarlistEntry`
+            - Provides the variable list entry element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Term`
+            - Provides the term element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.GuiLabel`
+            - Provides the GUI label element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.GuiMenuItem`
+            - Provides the GUI menu item element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.SuperScript`
+            - Provides the superscript element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Code`
+            - Provides the code element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Math`
+            - Provides the math element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InlineEquation`
+            - Provides the inline equation element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.SubScript`
+            - Provides the subscript element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InlineGraphic`
+            - Provides the inline graphic element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Quote`
+            - Provides the quote element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Link`
+            - Provides the link element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.XRef`
+            - Provides the cross reference element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.UserInput`
+            - Provides the user input element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Screen`
+            - Provides the screen element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Literal`
+            - Provides the literal output element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Caution`
+            - Provides the caution element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Graphic`
+            - Provides the graphic element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Function`
+            - Provides the function element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Note`
+            - Provides the note element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.BlockQuote`
+            - Provides the block quote element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.RefMeta`
+            - Provides the reference metadata element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.IndexTerm`
+            - Provides the index term element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Primary`
+            - Provides the primary element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.TGroup`
+            - Provides the tgroup element, which contains the header and body rows of a table.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Table`
+            - Provides the table element
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refentrytitle`
+            - Provides the title of the reference entry.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refnamediv`
+            - Provides the refnamediv element, which contains the name,
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refname`
+            - Provides the refname element which contains
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refpurpose`
+            - Provides the refpurpose element, which contains
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refclass`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Application`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refsect1`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Command`
+            - Provides the command element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ComputerOutput`
+            - Provides the computer output element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Figure`
+            - Provides the figure element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Footnote`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Footnoteref`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Formalpara`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Glossterm`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.GuiButton`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.GuiIcon`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Highlights`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Important`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InformalEquation`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Interface`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Markup`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Mediaobject`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Option`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refsect3`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Refsynopsisdiv`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Sidebar`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.XMLType`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.XMLWarning`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ClassName`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Imageobject`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InformalFigure`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Envar`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ImageData`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ColSpec`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.TBody`
+            - Provides the tbody element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Entry`
+            - Provides the entry element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Row`
+            - Provides the row element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.THead`
+            - Provides the thead element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Remark`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.LiteralLayout`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.CiteTitle`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ULink`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.SegTitle`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Chapter`
+            - Provides the chapter element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Section1`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ProductName`
+            - Provides the base element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.ArgumentList`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.Argument`
+            - Argument object.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.XMLCommand`
+            - Provides the XML command from the documentation.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.InformalTable`
+            - Provides the informal table element.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree.OxygenXmlTree`
+            - Provides for loading an XML file as an AST (abstract syntax tree).
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~to_py_name`
+            - Convert to a Python-compatible name.
+
+
+          * - :py:obj:`~get_iter_values`
+            - Get the values of an iterator.
+
+
+          * - :py:obj:`~get_quant_iter_pos`
+            - Get the values of a quantity iterator.
+
+
+          * - :py:obj:`~to_py_arg_name`
+            - Python-compatible term
+
+
+          * - :py:obj:`~get_complete_args_from_initial_arg`
+            - 
+
+
+          * - :py:obj:`~is_elipsis`
+            - Check if a name is an elipsis.
+
+
+          * - :py:obj:`~resize_length`
+            - Resize the length of a text.
+
+
+          * - :py:obj:`~ponctuaction_whitespace`
+            - 
+
+
+          * - :py:obj:`~resize_element_list`
+            - 
+
+
+          * - :py:obj:`~parse_element`
+            - Parse a single element.
+
+
+          * - :py:obj:`~parse_children`
+            - Parse the children of an element.
+
+
+          * - :py:obj:`~parse_text`
+            - Parse a paragraph element.
+
+
+          * - :py:obj:`~get_parser`
+            - 
+
+
+
+    .. tab-item:: Attributes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~superlatif`
+            - 
+
+
+          * - :py:obj:`~parsers`
+            - 
+
+
+          * - :py:obj:`~item_needing_links_base_url`
+            - 
+
+
+          * - :py:obj:`~item_needing_fcache`
+            - 
+
+
+          * - :py:obj:`~item_needing_all`
+            - 
+
+
+
+    .. tab-item:: Constants
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~CONV_EQN`
+            - 
+
+
+          * - :py:obj:`~CONST`
+            - 
+
+
+          * - :py:obj:`~CLEANUP`
+            - 
+
+
+          * - :py:obj:`~PY_ARG_CLEANUP`
+            - 
+
+
+          * - :py:obj:`~NAME_MAP_GLOB`
+            - 
+
+
+          * - :py:obj:`~SKIP`
+            - 
+
+
+          * - :py:obj:`~NO_RESIZE_LIST`
+            - 
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> NameMap</api/src/pyconverter/xml2py/ast_tree/NameMap>
+    <span class="nf nf-cod-symbol_class"></span> Element</api/src/pyconverter/xml2py/ast_tree/Element>
+    <span class="nf nf-cod-symbol_class"></span> ItemizedList</api/src/pyconverter/xml2py/ast_tree/ItemizedList>
+    <span class="nf nf-cod-symbol_class"></span> SimpleList</api/src/pyconverter/xml2py/ast_tree/SimpleList>
+    <span class="nf nf-cod-symbol_class"></span> Member</api/src/pyconverter/xml2py/ast_tree/Member>
+    <span class="nf nf-cod-symbol_class"></span> OrderedList</api/src/pyconverter/xml2py/ast_tree/OrderedList>
+    <span class="nf nf-cod-symbol_class"></span> ListItem</api/src/pyconverter/xml2py/ast_tree/ListItem>
+    <span class="nf nf-cod-symbol_class"></span> FileName</api/src/pyconverter/xml2py/ast_tree/FileName>
+    <span class="nf nf-cod-symbol_class"></span> OLink</api/src/pyconverter/xml2py/ast_tree/OLink>
+    <span class="nf nf-cod-symbol_class"></span> Paragraph</api/src/pyconverter/xml2py/ast_tree/Paragraph>
+    <span class="nf nf-cod-symbol_class"></span> Phrase</api/src/pyconverter/xml2py/ast_tree/Phrase>
+    <span class="nf nf-cod-symbol_class"></span> Structname</api/src/pyconverter/xml2py/ast_tree/Structname>
+    <span class="nf nf-cod-symbol_class"></span> Title</api/src/pyconverter/xml2py/ast_tree/Title>
+    <span class="nf nf-cod-symbol_class"></span> Emphasis</api/src/pyconverter/xml2py/ast_tree/Emphasis>
+    <span class="nf nf-cod-symbol_class"></span> Example</api/src/pyconverter/xml2py/ast_tree/Example>
+    <span class="nf nf-cod-symbol_class"></span> InformalExample</api/src/pyconverter/xml2py/ast_tree/InformalExample>
+    <span class="nf nf-cod-symbol_class"></span> GuiMenu</api/src/pyconverter/xml2py/ast_tree/GuiMenu>
+    <span class="nf nf-cod-symbol_class"></span> Replaceable</api/src/pyconverter/xml2py/ast_tree/Replaceable>
+    <span class="nf nf-cod-symbol_class"></span> ProgramListing</api/src/pyconverter/xml2py/ast_tree/ProgramListing>
+    <span class="nf nf-cod-symbol_class"></span> Variablelist</api/src/pyconverter/xml2py/ast_tree/Variablelist>
+    <span class="nf nf-cod-symbol_class"></span> RefSection</api/src/pyconverter/xml2py/ast_tree/RefSection>
+    <span class="nf nf-cod-symbol_class"></span> VarlistEntry</api/src/pyconverter/xml2py/ast_tree/VarlistEntry>
+    <span class="nf nf-cod-symbol_class"></span> Term</api/src/pyconverter/xml2py/ast_tree/Term>
+    <span class="nf nf-cod-symbol_class"></span> GuiLabel</api/src/pyconverter/xml2py/ast_tree/GuiLabel>
+    <span class="nf nf-cod-symbol_class"></span> GuiMenuItem</api/src/pyconverter/xml2py/ast_tree/GuiMenuItem>
+    <span class="nf nf-cod-symbol_class"></span> SuperScript</api/src/pyconverter/xml2py/ast_tree/SuperScript>
+    <span class="nf nf-cod-symbol_class"></span> Code</api/src/pyconverter/xml2py/ast_tree/Code>
+    <span class="nf nf-cod-symbol_class"></span> Math</api/src/pyconverter/xml2py/ast_tree/Math>
+    <span class="nf nf-cod-symbol_class"></span> InlineEquation</api/src/pyconverter/xml2py/ast_tree/InlineEquation>
+    <span class="nf nf-cod-symbol_class"></span> SubScript</api/src/pyconverter/xml2py/ast_tree/SubScript>
+    <span class="nf nf-cod-symbol_class"></span> InlineGraphic</api/src/pyconverter/xml2py/ast_tree/InlineGraphic>
+    <span class="nf nf-cod-symbol_class"></span> Quote</api/src/pyconverter/xml2py/ast_tree/Quote>
+    <span class="nf nf-cod-symbol_class"></span> Link</api/src/pyconverter/xml2py/ast_tree/Link>
+    <span class="nf nf-cod-symbol_class"></span> XRef</api/src/pyconverter/xml2py/ast_tree/XRef>
+    <span class="nf nf-cod-symbol_class"></span> UserInput</api/src/pyconverter/xml2py/ast_tree/UserInput>
+    <span class="nf nf-cod-symbol_class"></span> Screen</api/src/pyconverter/xml2py/ast_tree/Screen>
+    <span class="nf nf-cod-symbol_class"></span> Literal</api/src/pyconverter/xml2py/ast_tree/Literal>
+    <span class="nf nf-cod-symbol_class"></span> Caution</api/src/pyconverter/xml2py/ast_tree/Caution>
+    <span class="nf nf-cod-symbol_class"></span> Graphic</api/src/pyconverter/xml2py/ast_tree/Graphic>
+    <span class="nf nf-cod-symbol_class"></span> Function</api/src/pyconverter/xml2py/ast_tree/Function>
+    <span class="nf nf-cod-symbol_class"></span> Note</api/src/pyconverter/xml2py/ast_tree/Note>
+    <span class="nf nf-cod-symbol_class"></span> BlockQuote</api/src/pyconverter/xml2py/ast_tree/BlockQuote>
+    <span class="nf nf-cod-symbol_class"></span> RefMeta</api/src/pyconverter/xml2py/ast_tree/RefMeta>
+    <span class="nf nf-cod-symbol_class"></span> IndexTerm</api/src/pyconverter/xml2py/ast_tree/IndexTerm>
+    <span class="nf nf-cod-symbol_class"></span> Primary</api/src/pyconverter/xml2py/ast_tree/Primary>
+    <span class="nf nf-cod-symbol_class"></span> TGroup</api/src/pyconverter/xml2py/ast_tree/TGroup>
+    <span class="nf nf-cod-symbol_class"></span> Table</api/src/pyconverter/xml2py/ast_tree/Table>
+    <span class="nf nf-cod-symbol_class"></span> Refentrytitle</api/src/pyconverter/xml2py/ast_tree/Refentrytitle>
+    <span class="nf nf-cod-symbol_class"></span> Refnamediv</api/src/pyconverter/xml2py/ast_tree/Refnamediv>
+    <span class="nf nf-cod-symbol_class"></span> Refname</api/src/pyconverter/xml2py/ast_tree/Refname>
+    <span class="nf nf-cod-symbol_class"></span> Refpurpose</api/src/pyconverter/xml2py/ast_tree/Refpurpose>
+    <span class="nf nf-cod-symbol_class"></span> Refclass</api/src/pyconverter/xml2py/ast_tree/Refclass>
+    <span class="nf nf-cod-symbol_class"></span> Application</api/src/pyconverter/xml2py/ast_tree/Application>
+    <span class="nf nf-cod-symbol_class"></span> Refsect1</api/src/pyconverter/xml2py/ast_tree/Refsect1>
+    <span class="nf nf-cod-symbol_class"></span> Command</api/src/pyconverter/xml2py/ast_tree/Command>
+    <span class="nf nf-cod-symbol_class"></span> ComputerOutput</api/src/pyconverter/xml2py/ast_tree/ComputerOutput>
+    <span class="nf nf-cod-symbol_class"></span> Figure</api/src/pyconverter/xml2py/ast_tree/Figure>
+    <span class="nf nf-cod-symbol_class"></span> Footnote</api/src/pyconverter/xml2py/ast_tree/Footnote>
+    <span class="nf nf-cod-symbol_class"></span> Footnoteref</api/src/pyconverter/xml2py/ast_tree/Footnoteref>
+    <span class="nf nf-cod-symbol_class"></span> Formalpara</api/src/pyconverter/xml2py/ast_tree/Formalpara>
+    <span class="nf nf-cod-symbol_class"></span> Glossterm</api/src/pyconverter/xml2py/ast_tree/Glossterm>
+    <span class="nf nf-cod-symbol_class"></span> GuiButton</api/src/pyconverter/xml2py/ast_tree/GuiButton>
+    <span class="nf nf-cod-symbol_class"></span> GuiIcon</api/src/pyconverter/xml2py/ast_tree/GuiIcon>
+    <span class="nf nf-cod-symbol_class"></span> Highlights</api/src/pyconverter/xml2py/ast_tree/Highlights>
+    <span class="nf nf-cod-symbol_class"></span> Important</api/src/pyconverter/xml2py/ast_tree/Important>
+    <span class="nf nf-cod-symbol_class"></span> InformalEquation</api/src/pyconverter/xml2py/ast_tree/InformalEquation>
+    <span class="nf nf-cod-symbol_class"></span> Interface</api/src/pyconverter/xml2py/ast_tree/Interface>
+    <span class="nf nf-cod-symbol_class"></span> Markup</api/src/pyconverter/xml2py/ast_tree/Markup>
+    <span class="nf nf-cod-symbol_class"></span> Mediaobject</api/src/pyconverter/xml2py/ast_tree/Mediaobject>
+    <span class="nf nf-cod-symbol_class"></span> Option</api/src/pyconverter/xml2py/ast_tree/Option>
+    <span class="nf nf-cod-symbol_class"></span> Refsect3</api/src/pyconverter/xml2py/ast_tree/Refsect3>
+    <span class="nf nf-cod-symbol_class"></span> Refsynopsisdiv</api/src/pyconverter/xml2py/ast_tree/Refsynopsisdiv>
+    <span class="nf nf-cod-symbol_class"></span> Sidebar</api/src/pyconverter/xml2py/ast_tree/Sidebar>
+    <span class="nf nf-cod-symbol_class"></span> XMLType</api/src/pyconverter/xml2py/ast_tree/XMLType>
+    <span class="nf nf-cod-symbol_class"></span> XMLWarning</api/src/pyconverter/xml2py/ast_tree/XMLWarning>
+    <span class="nf nf-cod-symbol_class"></span> ClassName</api/src/pyconverter/xml2py/ast_tree/ClassName>
+    <span class="nf nf-cod-symbol_class"></span> Imageobject</api/src/pyconverter/xml2py/ast_tree/Imageobject>
+    <span class="nf nf-cod-symbol_class"></span> InformalFigure</api/src/pyconverter/xml2py/ast_tree/InformalFigure>
+    <span class="nf nf-cod-symbol_class"></span> Envar</api/src/pyconverter/xml2py/ast_tree/Envar>
+    <span class="nf nf-cod-symbol_class"></span> ImageData</api/src/pyconverter/xml2py/ast_tree/ImageData>
+    <span class="nf nf-cod-symbol_class"></span> ColSpec</api/src/pyconverter/xml2py/ast_tree/ColSpec>
+    <span class="nf nf-cod-symbol_class"></span> TBody</api/src/pyconverter/xml2py/ast_tree/TBody>
+    <span class="nf nf-cod-symbol_class"></span> Entry</api/src/pyconverter/xml2py/ast_tree/Entry>
+    <span class="nf nf-cod-symbol_class"></span> Row</api/src/pyconverter/xml2py/ast_tree/Row>
+    <span class="nf nf-cod-symbol_class"></span> THead</api/src/pyconverter/xml2py/ast_tree/THead>
+    <span class="nf nf-cod-symbol_class"></span> Remark</api/src/pyconverter/xml2py/ast_tree/Remark>
+    <span class="nf nf-cod-symbol_class"></span> LiteralLayout</api/src/pyconverter/xml2py/ast_tree/LiteralLayout>
+    <span class="nf nf-cod-symbol_class"></span> CiteTitle</api/src/pyconverter/xml2py/ast_tree/CiteTitle>
+    <span class="nf nf-cod-symbol_class"></span> ULink</api/src/pyconverter/xml2py/ast_tree/ULink>
+    <span class="nf nf-cod-symbol_class"></span> SegTitle</api/src/pyconverter/xml2py/ast_tree/SegTitle>
+    <span class="nf nf-cod-symbol_class"></span> Chapter</api/src/pyconverter/xml2py/ast_tree/Chapter>
+    <span class="nf nf-cod-symbol_class"></span> Section1</api/src/pyconverter/xml2py/ast_tree/Section1>
+    <span class="nf nf-cod-symbol_class"></span> ProductName</api/src/pyconverter/xml2py/ast_tree/ProductName>
+    <span class="nf nf-cod-symbol_class"></span> ArgumentList</api/src/pyconverter/xml2py/ast_tree/ArgumentList>
+    <span class="nf nf-cod-symbol_class"></span> Argument</api/src/pyconverter/xml2py/ast_tree/Argument>
+    <span class="nf nf-cod-symbol_class"></span> XMLCommand</api/src/pyconverter/xml2py/ast_tree/XMLCommand>
+    <span class="nf nf-cod-symbol_class"></span> InformalTable</api/src/pyconverter/xml2py/ast_tree/InformalTable>
+    <span class="nf nf-cod-symbol_class"></span> OxygenXmlTree</api/src/pyconverter/xml2py/ast_tree/OxygenXmlTree>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: to_py_name(name, name_map=None)
+
+   
+   Convert to a Python-compatible name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_iter_values(name: str)
+
+   
+   Get the values of an iterator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_quant_iter_pos(name: str) -> tuple
+
+   
+   Get the values of a quantity iterator.
+
+
+   :Parameters:
+
+       **name: str**
+           Name of the parameter containing the iterator.
+
+
+
+   :Returns:
+
+       :class:`python:tuple`
+           Tuple containing the iteration value and the position of the iterator.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: to_py_arg_name(name: str) -> str
+
+   
+   Python-compatible term
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_complete_args_from_initial_arg(initial_args: List[str], elipsis_args: List[str]) -> List[str]
+
+.. py:function:: is_elipsis(name: str) -> bool
+
+   
+   Check if a name is an elipsis.
+
+
+
+
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           True if the argument is an elipsis, False otherwise.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: resize_length(text, max_length=100, initial_indent='', subsequent_indent='', list=False)
+
+   
+   Resize the length of a text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: ponctuaction_whitespace(text, ponctuation)
+
+.. py:function:: resize_element_list(text, max_length=100)
+
+.. py:function:: parse_element(element)
+
+   
+   Parse a single element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: parse_children(element)
+
+   
+   Parse the children of an element.
+
+
+
+
+
+   :Returns:
+
+       :class:`python:list`
+           List of the children of the element.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: parse_text(element)
+
+   
+   Parse a paragraph element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_parser()
+
+.. py:data:: CONV_EQN
+   :value: False
+
+
+.. py:data:: CONST
+
+.. py:data:: CLEANUP
+
+.. py:data:: PY_ARG_CLEANUP
+
+.. py:data:: NAME_MAP_GLOB
+
+.. py:data:: SKIP
+
+.. py:data:: NO_RESIZE_LIST
+   :value: ['Variablelist']
+
+
+.. py:data:: superlatif
+   :value: ['st', 'nd', 'rd', 'th']
+
+
+.. py:data:: parsers
+
+.. py:data:: item_needing_links_base_url
+
+.. py:data:: item_needing_fcache
+
+.. py:data:: item_needing_all
+
+
+

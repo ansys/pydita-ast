@@ -1,0 +1,6 @@
+tag
+===
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: THead.tag

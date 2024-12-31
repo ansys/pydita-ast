@@ -1,0 +1,6 @@
+get
+===
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Math.get

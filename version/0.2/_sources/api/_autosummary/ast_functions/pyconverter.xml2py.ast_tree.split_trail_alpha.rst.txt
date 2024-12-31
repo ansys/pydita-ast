@@ -1,0 +1,6 @@
+﻿split\_trail\_alpha
+===================
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autofunction:: split_trail_alpha

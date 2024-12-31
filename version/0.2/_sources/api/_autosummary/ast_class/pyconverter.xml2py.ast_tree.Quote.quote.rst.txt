@@ -1,0 +1,6 @@
+quote
+=====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Quote.quote

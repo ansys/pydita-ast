@@ -1,0 +1,6 @@
+sphinx\_cmd
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Command.sphinx_cmd

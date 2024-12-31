@@ -1,0 +1,72 @@
+﻿Command
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Command
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Command.find
+      
+      
+      Command.find_all
+      
+      
+      Command.get
+      
+      
+      Command.has_children
+      
+      
+      Command.print_tree
+      
+      
+      Command.rec_find
+      
+      
+      Command.to_rst
+      
+      
+      Command.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Command.added
+      Command.any_isalnum
+      Command.args
+      Command.children
+      Command.command
+      Command.content
+      Command.has_args
+      Command.id
+      Command.next_elem
+      Command.prev_elem
+      Command.py_args
+      Command.py_cmd
+      Command.raw
+      Command.sphinx_cmd
+      Command.tag
+      Command.tail
+      Command.tail_no_args
+      Command.text_content
+      Command.title
+      Command.tostring
+   
+   

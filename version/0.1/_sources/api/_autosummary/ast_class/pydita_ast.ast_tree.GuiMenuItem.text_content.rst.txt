@@ -1,0 +1,6 @@
+text\_content
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: GuiMenuItem.text_content

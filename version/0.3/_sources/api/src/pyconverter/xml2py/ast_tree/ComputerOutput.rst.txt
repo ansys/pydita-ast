@@ -1,0 +1,94 @@
+
+
+:class:`ComputerOutput`
+=======================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.ComputerOutput(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the computer output element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ComputerOutput
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import ComputerOutput
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

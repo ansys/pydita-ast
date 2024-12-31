@@ -1,0 +1,154 @@
+
+
+
+
+
+
+The ``download.py`` module
+==========================
+
+.. py:module:: src.pyconverter.xml2py.download
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: download
+.. tab-set::
+
+
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~download`
+            - This function initially comes from the following GitHub repository:
+
+
+          * - :py:obj:`~download_folder`
+            - This function initially comes from the following GitHub repository:
+
+
+          * - :py:obj:`~download_template`
+            - Download the templage package provided by default.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+Functions to download template datasets from the pyconverter-xml2py repository.
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: download(c: github.ContentFile, out: pathlib.Path) -> None
+
+   
+   This function initially comes from the following GitHub repository:
+   https://github.com/Nordgaren/Github-Folder-Downloader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: download_folder(repo: github.Repository, folder: str, out: str, recursive: bool) -> None
+
+   
+   This function initially comes from the following GitHub repository:
+   https://github.com/Nordgaren/Github-Folder-Downloader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: download_template() -> None
+
+   
+   Download the templage package provided by default.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+

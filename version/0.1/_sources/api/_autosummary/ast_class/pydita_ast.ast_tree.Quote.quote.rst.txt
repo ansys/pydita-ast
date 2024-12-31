@@ -1,0 +1,6 @@
+quote
+=====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Quote.quote

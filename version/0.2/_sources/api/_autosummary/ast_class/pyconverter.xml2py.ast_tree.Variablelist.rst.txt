@@ -1,0 +1,66 @@
+﻿Variablelist
+============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Variablelist
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Variablelist.find
+      
+      
+      Variablelist.find_all
+      
+      
+      Variablelist.get
+      
+      
+      Variablelist.has_children
+      
+      
+      Variablelist.print_tree
+      
+      
+      Variablelist.rec_find
+      
+      
+      Variablelist.to_rst
+      
+      
+      Variablelist.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Variablelist.added
+      Variablelist.any_isalnum
+      Variablelist.children
+      Variablelist.content
+      Variablelist.id
+      Variablelist.next_elem
+      Variablelist.prev_elem
+      Variablelist.raw
+      Variablelist.tag
+      Variablelist.tail
+      Variablelist.terms
+      Variablelist.text_content
+      Variablelist.title
+      Variablelist.tostring
+   
+   

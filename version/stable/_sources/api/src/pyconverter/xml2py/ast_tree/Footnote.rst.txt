@@ -1,0 +1,45 @@
+
+
+:class:`Footnote`
+=================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Footnote(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the base element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Footnote
+
+
+
+
+
+

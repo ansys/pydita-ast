@@ -1,0 +1,190 @@
+
+
+
+
+
+
+The ``src.pyconverter.xml2py`` library
+======================================
+
+.. py:module:: src.pyconverter.xml2py
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: xml2py
+.. tab-set::
+
+    .. tab-item:: Subpackages
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.utils`
+            - 
+
+
+
+    .. tab-item:: Submodules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.ast_tree`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.cli`
+            - Command Line Interface for PyConverter-XML2Py.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.custom_functions`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.directory_format`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.download`
+            - Functions to download template datasets from the pyconverter-xml2py repository.
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.formatter`
+            - This module contains the functions to format the generated docstrings with
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.load_xml_doc`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.version_variables`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.writer`
+            - 
+
+
+
+
+
+
+
+
+    .. tab-item:: Attributes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~__version__`
+            - pyconverter.xml2py version.
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> utils</api/src/pyconverter/xml2py/utils/index>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-fa-file"></span> ast_tree</api/src/pyconverter/xml2py/ast_tree/index>
+    <span class="nf nf-fa-file"></span> cli</api/src/pyconverter/xml2py/cli/index>
+    <span class="nf nf-fa-file"></span> custom_functions</api/src/pyconverter/xml2py/custom_functions/index>
+    <span class="nf nf-fa-file"></span> directory_format</api/src/pyconverter/xml2py/directory_format/index>
+    <span class="nf nf-fa-file"></span> download</api/src/pyconverter/xml2py/download/index>
+    <span class="nf nf-fa-file"></span> formatter</api/src/pyconverter/xml2py/formatter/index>
+    <span class="nf nf-fa-file"></span> load_xml_doc</api/src/pyconverter/xml2py/load_xml_doc/index>
+    <span class="nf nf-fa-file"></span> version_variables</api/src/pyconverter/xml2py/version_variables/index>
+    <span class="nf nf-fa-file"></span> writer</api/src/pyconverter/xml2py/writer/index>
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+pyconverter.xml2py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:data:: __version__
+
+   
+   pyconverter.xml2py version.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+

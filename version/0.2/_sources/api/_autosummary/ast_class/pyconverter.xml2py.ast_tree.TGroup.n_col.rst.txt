@@ -1,0 +1,6 @@
+n\_col
+======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: TGroup.n_col

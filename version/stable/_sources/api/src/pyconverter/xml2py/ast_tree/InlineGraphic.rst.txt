@@ -1,0 +1,94 @@
+
+
+:class:`InlineGraphic`
+======================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.InlineGraphic(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the inline graphic element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InlineGraphic
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~fileref`
+            - File reference.
+
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import InlineGraphic
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: fileref()
+
+   
+   File reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

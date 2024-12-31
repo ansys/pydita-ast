@@ -1,0 +1,6 @@
+xml\_filename
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: OxygenXmlTree.xml_filename

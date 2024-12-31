@@ -1,0 +1,6 @@
+entityref
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Graphic.entityref

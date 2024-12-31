@@ -1,0 +1,65 @@
+﻿Screen
+======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Screen
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Screen.find
+      
+      
+      Screen.find_all
+      
+      
+      Screen.get
+      
+      
+      Screen.has_children
+      
+      
+      Screen.print_tree
+      
+      
+      Screen.rec_find
+      
+      
+      Screen.to_rst
+      
+      
+      Screen.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Screen.added
+      Screen.any_isalnum
+      Screen.children
+      Screen.content
+      Screen.id
+      Screen.next_elem
+      Screen.prev_elem
+      Screen.raw
+      Screen.tag
+      Screen.tail
+      Screen.text_content
+      Screen.title
+      Screen.tostring
+   
+   

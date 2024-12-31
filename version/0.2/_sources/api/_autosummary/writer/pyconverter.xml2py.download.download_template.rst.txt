@@ -1,0 +1,6 @@
+﻿download\_template
+==================
+
+.. currentmodule:: pyconverter.xml2py.download
+
+.. autofunction:: download_template

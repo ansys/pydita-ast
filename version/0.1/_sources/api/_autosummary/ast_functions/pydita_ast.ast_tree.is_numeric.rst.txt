@@ -1,0 +1,6 @@
+﻿is\_numeric
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autofunction:: is_numeric

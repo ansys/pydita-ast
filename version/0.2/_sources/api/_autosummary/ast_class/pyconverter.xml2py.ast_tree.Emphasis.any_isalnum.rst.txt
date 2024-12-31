@@ -1,0 +1,6 @@
+any\_isalnum
+============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Emphasis.any_isalnum

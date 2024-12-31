@@ -1,0 +1,6 @@
+﻿to\_py\_name
+============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autofunction:: to_py_name

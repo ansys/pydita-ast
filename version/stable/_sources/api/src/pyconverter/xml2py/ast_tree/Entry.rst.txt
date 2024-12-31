@@ -1,0 +1,127 @@
+
+
+:class:`Entry`
+==============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Entry(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the entry element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Entry
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~morerows`
+            - Value for the ``morerows`` parameter contained in the entry element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Entry
+
+Property detail
+---------------
+.. py:property:: morerows
+   
+   Value for the ``morerows`` parameter contained in the entry element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', links=None, base_url=None, fcache=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

@@ -1,0 +1,6 @@
+has\_args
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Command.has_args

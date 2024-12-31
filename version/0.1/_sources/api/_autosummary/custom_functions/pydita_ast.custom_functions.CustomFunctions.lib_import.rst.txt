@@ -1,0 +1,6 @@
+lib\_import
+===========
+
+.. currentmodule:: pydita_ast.custom_functions
+
+.. autoproperty:: CustomFunctions.lib_import

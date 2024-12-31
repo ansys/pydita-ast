@@ -1,0 +1,6 @@
+﻿to\_py\_name
+============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autofunction:: to_py_name

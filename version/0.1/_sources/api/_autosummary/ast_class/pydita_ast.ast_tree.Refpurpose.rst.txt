@@ -1,0 +1,65 @@
+﻿Refpurpose
+==========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Refpurpose
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Refpurpose.find
+      
+      
+      Refpurpose.find_all
+      
+      
+      Refpurpose.get
+      
+      
+      Refpurpose.has_children
+      
+      
+      Refpurpose.print_tree
+      
+      
+      Refpurpose.rec_find
+      
+      
+      Refpurpose.to_rst
+      
+      
+      Refpurpose.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Refpurpose.added
+      Refpurpose.any_isalnum
+      Refpurpose.children
+      Refpurpose.content
+      Refpurpose.id
+      Refpurpose.next_elem
+      Refpurpose.prev_elem
+      Refpurpose.raw
+      Refpurpose.tag
+      Refpurpose.tail
+      Refpurpose.text_content
+      Refpurpose.title
+      Refpurpose.tostring
+   
+   

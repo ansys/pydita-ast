@@ -1,0 +1,222 @@
+
+
+:class:`CustomFunctions`
+========================
+
+.. py:class:: src.pyconverter.xml2py.custom_functions.CustomFunctions
+
+   
+   Provides for creating customized functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CustomFunctions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~path`
+            - Path object where the customized function files are located.
+          * - :py:attr:`~py_names`
+            - List with all customized functions located in the folder.
+          * - :py:attr:`~py_returns`
+            - Dictionary containing the ``Returns`` section if any.
+          * - :py:attr:`~py_examples`
+            - Dictionary containing the ``Examples`` section if any.
+          * - :py:attr:`~py_code`
+            - Dictionary containing the customized source code.
+          * - :py:attr:`~lib_import`
+            - Dictionary containing the needed libraries if any.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.custom_functions import CustomFunctions
+
+Property detail
+---------------
+.. py:property:: path
+   :type: pathlib.Path
+
+   
+   Path object where the customized function files are located.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_names
+   :type: list
+
+   
+   List with all customized functions located in the folder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_returns
+   :type: dict
+
+   
+   Dictionary containing the ``Returns`` section if any.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_examples
+   :type: dict
+
+   
+   Dictionary containing the ``Examples`` section if any.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_code
+   :type: dict
+
+   
+   Dictionary containing the customized source code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: lib_import
+   :type: dict
+
+   
+   Dictionary containing the needed libraries if any.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+﻿InformalExample
+===============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: InformalExample
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      InformalExample.find
+      
+      
+      InformalExample.find_all
+      
+      
+      InformalExample.get
+      
+      
+      InformalExample.has_children
+      
+      
+      InformalExample.print_tree
+      
+      
+      InformalExample.rec_find
+      
+      
+      InformalExample.to_rst
+      
+      
+      InformalExample.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      InformalExample.added
+      InformalExample.any_isalnum
+      InformalExample.children
+      InformalExample.content
+      InformalExample.id
+      InformalExample.next_elem
+      InformalExample.prev_elem
+      InformalExample.raw
+      InformalExample.tag
+      InformalExample.tail
+      InformalExample.text_content
+      InformalExample.title
+      InformalExample.tostring
+   
+   

@@ -1,0 +1,6 @@
+﻿download\_folder
+================
+
+.. currentmodule:: pyconverter.xml2py.download
+
+.. autofunction:: download_folder

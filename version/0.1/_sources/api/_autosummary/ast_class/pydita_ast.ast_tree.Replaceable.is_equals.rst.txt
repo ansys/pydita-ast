@@ -1,0 +1,6 @@
+is\_equals
+==========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Replaceable.is_equals

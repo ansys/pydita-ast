@@ -1,0 +1,45 @@
+
+
+:class:`UserInput`
+==================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.UserInput(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the user input element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import UserInput
+
+
+
+
+
+

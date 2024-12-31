@@ -1,0 +1,66 @@
+﻿XRef
+====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: XRef
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      XRef.find
+      
+      
+      XRef.find_all
+      
+      
+      XRef.get
+      
+      
+      XRef.has_children
+      
+      
+      XRef.print_tree
+      
+      
+      XRef.rec_find
+      
+      
+      XRef.to_rst
+      
+      
+      XRef.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      XRef.added
+      XRef.any_isalnum
+      XRef.children
+      XRef.content
+      XRef.id
+      XRef.linkend
+      XRef.next_elem
+      XRef.prev_elem
+      XRef.raw
+      XRef.tag
+      XRef.tail
+      XRef.text_content
+      XRef.title
+      XRef.tostring
+   
+   

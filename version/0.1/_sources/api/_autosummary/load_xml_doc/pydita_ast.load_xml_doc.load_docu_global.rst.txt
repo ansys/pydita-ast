@@ -1,0 +1,6 @@
+﻿load\_docu\_global
+==================
+
+.. currentmodule:: pydita_ast.load_xml_doc
+
+.. autofunction:: load_docu_global

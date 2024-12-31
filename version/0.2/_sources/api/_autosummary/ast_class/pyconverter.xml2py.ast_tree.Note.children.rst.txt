@@ -1,0 +1,6 @@
+children
+========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Note.children

@@ -1,0 +1,6 @@
+equation
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: InlineEquation.equation

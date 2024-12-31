@@ -1,0 +1,66 @@
+﻿Graphic
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Graphic
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Graphic.find
+      
+      
+      Graphic.find_all
+      
+      
+      Graphic.get
+      
+      
+      Graphic.has_children
+      
+      
+      Graphic.print_tree
+      
+      
+      Graphic.rec_find
+      
+      
+      Graphic.to_rst
+      
+      
+      Graphic.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Graphic.added
+      Graphic.any_isalnum
+      Graphic.children
+      Graphic.content
+      Graphic.entityref
+      Graphic.id
+      Graphic.next_elem
+      Graphic.prev_elem
+      Graphic.raw
+      Graphic.tag
+      Graphic.tail
+      Graphic.text_content
+      Graphic.title
+      Graphic.tostring
+   
+   

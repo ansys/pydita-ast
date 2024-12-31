@@ -1,0 +1,65 @@
+﻿GuiMenuItem
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: GuiMenuItem
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      GuiMenuItem.find
+      
+      
+      GuiMenuItem.find_all
+      
+      
+      GuiMenuItem.get
+      
+      
+      GuiMenuItem.has_children
+      
+      
+      GuiMenuItem.print_tree
+      
+      
+      GuiMenuItem.rec_find
+      
+      
+      GuiMenuItem.to_rst
+      
+      
+      GuiMenuItem.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      GuiMenuItem.added
+      GuiMenuItem.any_isalnum
+      GuiMenuItem.children
+      GuiMenuItem.content
+      GuiMenuItem.id
+      GuiMenuItem.next_elem
+      GuiMenuItem.prev_elem
+      GuiMenuItem.raw
+      GuiMenuItem.tag
+      GuiMenuItem.tail
+      GuiMenuItem.text_content
+      GuiMenuItem.title
+      GuiMenuItem.tostring
+   
+   

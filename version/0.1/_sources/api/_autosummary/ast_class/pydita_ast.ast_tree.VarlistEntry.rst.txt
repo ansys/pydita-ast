@@ -1,0 +1,76 @@
+﻿VarlistEntry
+============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: VarlistEntry
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      VarlistEntry.find
+      
+      
+      VarlistEntry.find_all
+      
+      
+      VarlistEntry.get
+      
+      
+      VarlistEntry.has_children
+      
+      
+      VarlistEntry.print_tree
+      
+      
+      VarlistEntry.py_term
+      
+      
+      VarlistEntry.py_text
+      
+      
+      VarlistEntry.rec_find
+      
+      
+      VarlistEntry.to_rst
+      
+      
+      VarlistEntry.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      VarlistEntry.active
+      VarlistEntry.added
+      VarlistEntry.any_isalnum
+      VarlistEntry.children
+      VarlistEntry.content
+      VarlistEntry.id
+      VarlistEntry.is_arg
+      VarlistEntry.next_elem
+      VarlistEntry.parm_types
+      VarlistEntry.prev_elem
+      VarlistEntry.raw
+      VarlistEntry.tag
+      VarlistEntry.tail
+      VarlistEntry.term
+      VarlistEntry.text
+      VarlistEntry.text_content
+      VarlistEntry.title
+      VarlistEntry.tostring
+   
+   

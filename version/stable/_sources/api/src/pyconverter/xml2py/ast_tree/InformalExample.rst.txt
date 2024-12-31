@@ -1,0 +1,74 @@
+
+
+:class:`InformalExample`
+========================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.InformalExample(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the informal example element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: InformalExample
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import InformalExample
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: __repr__()
+
+

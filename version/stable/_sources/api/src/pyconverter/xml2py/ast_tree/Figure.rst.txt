@@ -1,0 +1,151 @@
+
+
+:class:`Figure`
+===============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Figure(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the figure element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Figure
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~title`
+            - First title element found in the figure element.
+          * - :py:attr:`~graphic`
+            - First graphic element found in the figure element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Figure
+
+Property detail
+---------------
+.. py:property:: title
+   
+   First title element found in the figure element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: graphic
+   
+   First graphic element found in the figure element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100, fcache=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

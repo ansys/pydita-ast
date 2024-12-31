@@ -1,0 +1,6 @@
+next\_elem
+==========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Paragraph.next_elem

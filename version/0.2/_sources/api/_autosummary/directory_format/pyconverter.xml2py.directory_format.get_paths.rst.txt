@@ -1,0 +1,6 @@
+﻿get\_paths
+==========
+
+.. currentmodule:: pyconverter.xml2py.directory_format
+
+.. autofunction:: get_paths

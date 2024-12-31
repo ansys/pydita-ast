@@ -1,0 +1,6 @@
+types\_repr
+===========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. automethod:: RefMeta.types_repr

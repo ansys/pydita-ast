@@ -1,0 +1,74 @@
+
+
+
+
+
+
+The ``utils`` package
+=========================
+
+.. py:module:: src.pyconverter.xml2py.utils
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: utils
+.. tab-set::
+
+
+    .. tab-item:: Submodules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.utils.regex_pattern`
+            - 
+
+
+          * - :py:obj:`~src.pyconverter.xml2py.utils.utils`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-fa-file"></span> regex_pattern</api/src/pyconverter/xml2py/utils/regex_pattern/index>
+    <span class="nf nf-fa-file"></span> utils</api/src/pyconverter/xml2py/utils/utils/index>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

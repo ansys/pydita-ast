@@ -1,0 +1,6 @@
+row\_in\_tbody
+==============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: TGroup.row_in_tbody

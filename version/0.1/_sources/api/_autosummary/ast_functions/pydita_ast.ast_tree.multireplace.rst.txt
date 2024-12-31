@@ -1,0 +1,6 @@
+﻿multireplace
+============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autofunction:: multireplace

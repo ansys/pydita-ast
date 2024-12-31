@@ -1,0 +1,6 @@
+has\_children
+=============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. automethod:: VarlistEntry.has_children

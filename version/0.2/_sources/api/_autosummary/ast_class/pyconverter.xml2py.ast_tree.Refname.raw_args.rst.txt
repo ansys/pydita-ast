@@ -1,0 +1,6 @@
+raw\_args
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Refname.raw_args

@@ -1,0 +1,6 @@
+py\_names
+=========
+
+.. currentmodule:: pydita_ast.custom_functions
+
+.. autoproperty:: CustomFunctions.py_names

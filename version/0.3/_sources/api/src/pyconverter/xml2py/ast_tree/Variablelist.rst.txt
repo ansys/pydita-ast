@@ -1,0 +1,127 @@
+
+
+:class:`Variablelist`
+=====================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Variablelist(element)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the variable list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Variablelist
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~terms`
+            - List containing the terms of the element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Variablelist
+
+Property detail
+---------------
+.. py:property:: terms
+   
+   List containing the terms of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100, links=None, base_url=None, fcache=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

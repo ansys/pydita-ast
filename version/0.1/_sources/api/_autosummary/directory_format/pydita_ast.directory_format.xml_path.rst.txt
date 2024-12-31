@@ -1,0 +1,6 @@
+﻿xml\_path
+=========
+
+.. currentmodule:: pydita_ast.directory_format
+
+.. autofunction:: xml_path

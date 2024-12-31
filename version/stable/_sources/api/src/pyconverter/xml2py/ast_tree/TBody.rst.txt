@@ -1,0 +1,127 @@
+
+
+:class:`TBody`
+==============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.TBody(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the tbody element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TBody
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a list to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~rows`
+            - Return all the row elements found in the TBody element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import TBody
+
+Property detail
+---------------
+.. py:property:: rows
+   
+   Return all the row elements found in the TBody element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(l_head, indent='', links=None, base_url=None)
+
+   
+   Return a list to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

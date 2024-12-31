@@ -1,0 +1,106 @@
+
+
+:class:`Paragraph`
+==================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Paragraph(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the paragraph element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: Paragraph
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Paragraph
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: __repr__()
+
+.. py:method:: to_rst(indent='', max_length=100, links=None, base_url=None, fcache=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

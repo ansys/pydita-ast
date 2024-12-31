@@ -1,0 +1,283 @@
+
+
+:class:`Command`
+================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Command(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the command element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: Command
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~command`
+            - Name of the command.
+          * - :py:attr:`~tail_no_args`
+            - Tail of the element after removing all its arguments.
+          * - :py:attr:`~has_args`
+            - Return whether the element has arguments.
+          * - :py:attr:`~args`
+            - Any terms immediately following the command.
+          * - :py:attr:`~py_args`
+            - String containing the arguments of the element.
+          * - :py:attr:`~py_cmd`
+            - Pythonic name of the command.
+          * - :py:attr:`~sphinx_cmd`
+            - String to refer to the Python command with Sphinx.
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Command
+
+Property detail
+---------------
+.. py:property:: command
+   
+   Name of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: tail_no_args
+   
+   Tail of the element after removing all its arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: has_args
+   
+   Return whether the element has arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: args
+   
+   Any terms immediately following the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_args
+   
+   String containing the arguments of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_cmd
+   
+   Pythonic name of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: sphinx_cmd
+   
+   String to refer to the Python command with Sphinx.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: __repr__()
+
+.. py:method:: to_rst(indent='', max_length=100)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

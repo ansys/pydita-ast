@@ -1,0 +1,127 @@
+
+
+:class:`Emphasis`
+=================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Emphasis(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the emphasis element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Emphasis
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~role`
+            - Return the role parameter value contained in the Emphasis element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Emphasis
+
+Property detail
+---------------
+.. py:property:: role
+   
+   Return the role parameter value contained in the Emphasis element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100, links=None, base_url=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

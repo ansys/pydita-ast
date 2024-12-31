@@ -1,0 +1,124 @@
+
+
+
+
+
+
+The ``directory_format.py`` module
+==================================
+
+.. py:module:: src.pyconverter.xml2py.directory_format
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: directory_format
+.. tab-set::
+
+
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~get_paths`
+            - Get the paths to the directories needed for the conversion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: get_paths(path: pathlib.Path, graph_path: Union[pathlib.Path, None] = None, link_path: Union[pathlib.Path, None] = None, term_path: Union[pathlib.Path, None] = None, xml_path: Union[pathlib.Path, None] = None) -> Tuple[pathlib.Path, pathlib.Path, pathlib.Path, pathlib.Path]
+
+   
+   Get the paths to the directories needed for the conversion.
+
+
+   :Parameters:
+
+       **path: Path**
+           Path object of the directory with the predefined format.
+
+       **graph_path: Path, optional**
+           Path object of the directory containing the graphics. The default is ``None``,
+           in which case the XML predefined directory format is used.
+
+       **link_path: Path, optional**
+           Path object of the directory containing the links. The default is ``None``,
+           in which case the XML predefined directory format is used.
+
+       **term_path: Path, optional**
+           Path object of the directory containing the terms. The default is ``None``,
+           in which case the XML predefined directory format is used.
+
+       **xml_path: Path, optional**
+           Path object of the directory containing the XML files. The default is ``None``,
+           in which case the XML predefined directory format is used.
+
+
+
+   :Returns:
+
+       :obj:`Path`
+           Path object of the directory containing the graphics.
+
+       :obj:`Path`
+           Path object of the directory containing the links.
+
+       :obj:`Path`
+           Path object of the directory containing the terms.
+
+       :obj:`Path`
+           Path object of the directory containing the XML files.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+

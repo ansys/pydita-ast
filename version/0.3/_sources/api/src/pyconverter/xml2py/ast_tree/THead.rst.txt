@@ -1,0 +1,128 @@
+
+
+:class:`THead`
+==============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.THead(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the thead element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: THead
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a list and the length of the list for converting the element
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~rows`
+            - Return all row elements found in the THead element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import THead
+
+Property detail
+---------------
+.. py:property:: rows
+   
+   Return all row elements found in the THead element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', links=None, base_url=None)
+
+   
+   Return a list and the length of the list for converting the element
+   to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

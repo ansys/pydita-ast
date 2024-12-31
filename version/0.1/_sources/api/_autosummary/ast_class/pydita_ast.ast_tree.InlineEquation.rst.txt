@@ -1,0 +1,66 @@
+﻿InlineEquation
+==============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: InlineEquation
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      InlineEquation.find
+      
+      
+      InlineEquation.find_all
+      
+      
+      InlineEquation.get
+      
+      
+      InlineEquation.has_children
+      
+      
+      InlineEquation.print_tree
+      
+      
+      InlineEquation.rec_find
+      
+      
+      InlineEquation.to_rst
+      
+      
+      InlineEquation.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      InlineEquation.added
+      InlineEquation.any_isalnum
+      InlineEquation.children
+      InlineEquation.content
+      InlineEquation.equation
+      InlineEquation.id
+      InlineEquation.next_elem
+      InlineEquation.prev_elem
+      InlineEquation.raw
+      InlineEquation.tag
+      InlineEquation.tail
+      InlineEquation.text_content
+      InlineEquation.title
+      InlineEquation.tostring
+   
+   

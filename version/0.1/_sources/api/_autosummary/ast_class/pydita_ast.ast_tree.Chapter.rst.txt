@@ -1,0 +1,66 @@
+﻿Chapter
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Chapter
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Chapter.find
+      
+      
+      Chapter.find_all
+      
+      
+      Chapter.get
+      
+      
+      Chapter.has_children
+      
+      
+      Chapter.print_tree
+      
+      
+      Chapter.rec_find
+      
+      
+      Chapter.to_rst
+      
+      
+      Chapter.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Chapter.added
+      Chapter.any_isalnum
+      Chapter.children
+      Chapter.content
+      Chapter.helpstring
+      Chapter.id
+      Chapter.next_elem
+      Chapter.prev_elem
+      Chapter.raw
+      Chapter.tag
+      Chapter.tail
+      Chapter.text_content
+      Chapter.title
+      Chapter.tostring
+   
+   

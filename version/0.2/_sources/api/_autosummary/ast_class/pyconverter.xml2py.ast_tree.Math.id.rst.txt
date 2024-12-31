@@ -1,0 +1,6 @@
+id
+==
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Math.id

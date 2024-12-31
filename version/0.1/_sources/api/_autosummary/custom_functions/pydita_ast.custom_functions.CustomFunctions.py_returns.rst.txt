@@ -1,0 +1,6 @@
+py\_returns
+===========
+
+.. currentmodule:: pydita_ast.custom_functions
+
+.. autoproperty:: CustomFunctions.py_returns

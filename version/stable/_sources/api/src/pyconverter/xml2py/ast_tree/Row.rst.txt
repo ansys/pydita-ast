@@ -1,0 +1,127 @@
+
+
+:class:`Row`
+============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Row(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the row element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Row
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst_list`
+            - Return a list to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~entry`
+            - Return all entry elements found in the row element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Row
+
+Property detail
+---------------
+.. py:property:: entry
+   
+   Return all entry elements found in the row element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst_list(indent='', links=None, base_url=None)
+
+   
+   Return a list to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

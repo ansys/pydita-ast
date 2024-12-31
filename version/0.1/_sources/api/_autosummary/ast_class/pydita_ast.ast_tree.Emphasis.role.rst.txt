@@ -1,0 +1,6 @@
+role
+====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Emphasis.role

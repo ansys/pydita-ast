@@ -1,0 +1,112 @@
+
+
+
+
+
+
+The ``regex_pattern.py`` module
+===============================
+
+.. py:module:: src.pyconverter.xml2py.utils.regex_pattern
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: regex_pattern
+.. tab-set::
+
+
+
+
+
+
+
+
+
+    .. tab-item:: Constants
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~BEFORE_DEF`
+            - 
+
+
+          * - :py:obj:`~GET_GROUP`
+            - 
+
+
+          * - :py:obj:`~GET_CLASSNAME`
+            - 
+
+
+          * - :py:obj:`~GET_TYPENAME_1OPT`
+            - 
+
+
+          * - :py:obj:`~GET_TYPENAME_2OPT`
+            - 
+
+
+          * - :py:obj:`~GET_IMPORTS`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:data:: BEFORE_DEF
+   :value: '[\\s\\S]*?(?=def '
+
+
+.. py:data:: GET_GROUP
+   :value: '(?<=&)(.*?)(?=;)'
+
+
+.. py:data:: GET_CLASSNAME
+   :value: '(\\S+)(?=:)'
+
+
+.. py:data:: GET_TYPENAME_1OPT
+   :value: '(?<=:)(.*)'
+
+
+.. py:data:: GET_TYPENAME_2OPT
+   :value: '(?<=:)(.*?)(?=[A-Z][A-Z])'
+
+
+.. py:data:: GET_IMPORTS
+   :value: '(?:(?:from [a-zA-Z0-9_.]* import [a-zA-Z0-9_.]* as [a-zA-Z0-9_.]*)|(?:from [a-zA-Z0-9_.]*...
+
+
+
+

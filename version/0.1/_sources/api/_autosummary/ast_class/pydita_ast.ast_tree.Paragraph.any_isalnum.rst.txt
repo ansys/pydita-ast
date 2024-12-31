@@ -1,0 +1,6 @@
+any\_isalnum
+============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Paragraph.any_isalnum

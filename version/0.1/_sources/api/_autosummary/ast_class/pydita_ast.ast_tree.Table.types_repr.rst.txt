@@ -1,0 +1,6 @@
+types\_repr
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Table.types_repr

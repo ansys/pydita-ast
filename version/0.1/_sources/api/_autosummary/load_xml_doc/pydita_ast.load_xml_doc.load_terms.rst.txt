@@ -1,0 +1,6 @@
+﻿load\_terms
+===========
+
+.. currentmodule:: pydita_ast.load_xml_doc
+
+.. autofunction:: load_terms

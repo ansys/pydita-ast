@@ -1,0 +1,6 @@
+refentry\_title
+===============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: RefMeta.refentry_title

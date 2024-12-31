@@ -1,0 +1,93 @@
+
+
+:class:`RefMeta`
+================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.RefMeta(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the reference metadata element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RefMeta
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~refentry_title`
+            - Title of the referency entry.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import RefMeta
+
+Property detail
+---------------
+.. py:property:: refentry_title
+   
+   Title of the referency entry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+

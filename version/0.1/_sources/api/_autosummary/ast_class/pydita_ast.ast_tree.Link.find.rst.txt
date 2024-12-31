@@ -1,0 +1,6 @@
+find
+====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: Link.find

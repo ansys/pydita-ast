@@ -1,0 +1,6 @@
+next\_elem
+==========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Figure.next_elem

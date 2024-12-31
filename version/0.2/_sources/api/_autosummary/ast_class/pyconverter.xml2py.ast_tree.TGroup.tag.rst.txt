@@ -1,0 +1,6 @@
+tag
+===
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: TGroup.tag

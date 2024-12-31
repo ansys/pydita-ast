@@ -1,0 +1,68 @@
+﻿InlineGraphic
+=============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: InlineGraphic
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      InlineGraphic.fileref
+      
+      
+      InlineGraphic.find
+      
+      
+      InlineGraphic.find_all
+      
+      
+      InlineGraphic.get
+      
+      
+      InlineGraphic.has_children
+      
+      
+      InlineGraphic.print_tree
+      
+      
+      InlineGraphic.rec_find
+      
+      
+      InlineGraphic.to_rst
+      
+      
+      InlineGraphic.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      InlineGraphic.added
+      InlineGraphic.any_isalnum
+      InlineGraphic.children
+      InlineGraphic.content
+      InlineGraphic.id
+      InlineGraphic.next_elem
+      InlineGraphic.prev_elem
+      InlineGraphic.raw
+      InlineGraphic.tag
+      InlineGraphic.tail
+      InlineGraphic.text_content
+      InlineGraphic.title
+      InlineGraphic.tostring
+   
+   

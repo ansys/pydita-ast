@@ -1,0 +1,65 @@
+﻿SubScript
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: SubScript
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      SubScript.find
+      
+      
+      SubScript.find_all
+      
+      
+      SubScript.get
+      
+      
+      SubScript.has_children
+      
+      
+      SubScript.print_tree
+      
+      
+      SubScript.rec_find
+      
+      
+      SubScript.to_rst
+      
+      
+      SubScript.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      SubScript.added
+      SubScript.any_isalnum
+      SubScript.children
+      SubScript.content
+      SubScript.id
+      SubScript.next_elem
+      SubScript.prev_elem
+      SubScript.raw
+      SubScript.tag
+      SubScript.tail
+      SubScript.text_content
+      SubScript.title
+      SubScript.tostring
+   
+   

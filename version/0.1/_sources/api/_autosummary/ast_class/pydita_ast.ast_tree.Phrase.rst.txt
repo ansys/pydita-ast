@@ -1,0 +1,65 @@
+﻿Phrase
+======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Phrase
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Phrase.find
+      
+      
+      Phrase.find_all
+      
+      
+      Phrase.get
+      
+      
+      Phrase.has_children
+      
+      
+      Phrase.print_tree
+      
+      
+      Phrase.rec_find
+      
+      
+      Phrase.to_rst
+      
+      
+      Phrase.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Phrase.added
+      Phrase.any_isalnum
+      Phrase.children
+      Phrase.content
+      Phrase.id
+      Phrase.next_elem
+      Phrase.prev_elem
+      Phrase.raw
+      Phrase.tag
+      Phrase.tail
+      Phrase.text_content
+      Phrase.title
+      Phrase.tostring
+   
+   

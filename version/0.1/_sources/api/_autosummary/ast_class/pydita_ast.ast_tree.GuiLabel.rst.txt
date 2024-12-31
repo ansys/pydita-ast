@@ -1,0 +1,65 @@
+﻿GuiLabel
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: GuiLabel
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      GuiLabel.find
+      
+      
+      GuiLabel.find_all
+      
+      
+      GuiLabel.get
+      
+      
+      GuiLabel.has_children
+      
+      
+      GuiLabel.print_tree
+      
+      
+      GuiLabel.rec_find
+      
+      
+      GuiLabel.to_rst
+      
+      
+      GuiLabel.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      GuiLabel.added
+      GuiLabel.any_isalnum
+      GuiLabel.children
+      GuiLabel.content
+      GuiLabel.id
+      GuiLabel.next_elem
+      GuiLabel.prev_elem
+      GuiLabel.raw
+      GuiLabel.tag
+      GuiLabel.tail
+      GuiLabel.text_content
+      GuiLabel.title
+      GuiLabel.tostring
+   
+   

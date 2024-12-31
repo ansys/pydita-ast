@@ -1,0 +1,6 @@
+targetptr
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: OLink.targetptr

@@ -1,0 +1,549 @@
+
+
+:class:`XMLCommand`
+===================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.XMLCommand(filename, refentry, terms, docu_global, version_variables, links, fcache, meta_only=False)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the XML command from the documentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: XMLCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~py_signature`
+            - Beginning of the Python command's definition.
+          * - :py:attr:`~py_docstring`
+            - Python docstring of the command.
+          * - :py:attr:`~py_notes`
+            - Python-formatted notes string.
+          * - :py:attr:`~py_parm`
+            - Python parameter's string.
+          * - :py:attr:`~py_source`
+            - Return the Python source.
+          * - :py:attr:`~to_python`
+            - Return the complete Python definition of the command.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~xml_filename`
+            - Source filename of the command.
+          * - :py:attr:`~args`
+            - Command arguments.
+          * - :py:attr:`~default`
+            - Command default.
+          * - :py:attr:`~arg_desc`
+            - Argument object list of the command.
+          * - :py:attr:`~short_desc`
+            - Short description of the command.
+          * - :py:attr:`~name`
+            - Name of the XML command.
+          * - :py:attr:`~py_name`
+            - Python-compatible name.
+          * - :py:attr:`~py_args`
+            - 
+          * - :py:attr:`~is_archived`
+            - Flag indicating if the command is archived.
+          * - :py:attr:`~group`
+            - Group of the command.
+          * - :py:attr:`~url`
+            - URL to the Ansys command documentation.
+          * - :py:attr:`~filename`
+            - Command filename
+          * - :py:attr:`~notes`
+            - Notes of the command.
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import XMLCommand
+
+Property detail
+---------------
+.. py:property:: xml_filename
+   
+   Source filename of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: args
+   
+   Command arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: default
+   
+   Command default.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: arg_desc
+   :type: List[Argument]
+
+   
+   Argument object list of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: short_desc
+   
+   Short description of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: name
+   
+   Name of the XML command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_name
+   
+   Python-compatible name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: py_args
+
+.. py:property:: is_archived
+   
+   Flag indicating if the command is archived.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: group
+   
+   Group of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: url
+   
+   URL to the Ansys command documentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: filename
+   
+   Command filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: notes
+   
+   Notes of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: py_signature(indent='') -> str
+
+   
+   Beginning of the Python command's definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: py_docstring(custom_functions, max_length=100)
+
+   
+   Python docstring of the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: py_notes(max_length=100)
+
+   
+   Python-formatted notes string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__()
+
+.. py:method:: py_parm(max_length=100, indent='', links=None, base_url=None, fcache=None)
+
+   
+   Python parameter's string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: py_source(custom_functions=None, indent='')
+
+   
+   Return the Python source.
+
+
+   :Parameters:
+
+       **custom_functions: CustomFunctions, optional**
+           Custom functions to add to the command. The default is ``None``.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: to_python(custom_functions=None, indent='')
+
+   
+   Return the complete Python definition of the command.
+
+
+   :Parameters:
+
+       **custom_functions: CustomFunctions, optional**
+           Custom functions to add to the command. The default is ``None``.
+
+       **indent: str, optional**
+           Indentation of the Python function. The default is ``""``.
+
+
+
+   :Returns:
+
+       :class:`python:str`
+           Python function of the command including the converted docstring.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

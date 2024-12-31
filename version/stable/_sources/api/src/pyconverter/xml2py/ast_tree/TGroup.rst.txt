@@ -1,0 +1,199 @@
+
+
+:class:`TGroup`
+===============
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.TGroup(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the tgroup element, which contains the header and body rows of a table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TGroup
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~n_col`
+            - Number of columns.
+          * - :py:attr:`~thead`
+            - THead.
+          * - :py:attr:`~tbody`
+            - TBody.
+          * - :py:attr:`~row_in_tbody`
+            - List of the rows in the TBody.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import TGroup
+
+Property detail
+---------------
+.. py:property:: n_col
+   
+   Number of columns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: thead
+   
+   THead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: tbody
+   
+   TBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: row_in_tbody
+   
+   List of the rows in the TBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', links=None, base_url=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

@@ -1,0 +1,6 @@
+parm\_types
+===========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: VarlistEntry.parm_types

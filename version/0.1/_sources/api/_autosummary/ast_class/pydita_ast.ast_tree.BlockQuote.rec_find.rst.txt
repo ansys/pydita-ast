@@ -1,0 +1,6 @@
+rec\_find
+=========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: BlockQuote.rec_find

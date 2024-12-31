@@ -1,0 +1,6 @@
+any\_isalnum
+============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: RefSection.any_isalnum

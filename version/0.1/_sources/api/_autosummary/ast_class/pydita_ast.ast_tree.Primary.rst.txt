@@ -1,0 +1,65 @@
+﻿Primary
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Primary
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Primary.find
+      
+      
+      Primary.find_all
+      
+      
+      Primary.get
+      
+      
+      Primary.has_children
+      
+      
+      Primary.print_tree
+      
+      
+      Primary.rec_find
+      
+      
+      Primary.to_rst
+      
+      
+      Primary.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Primary.added
+      Primary.any_isalnum
+      Primary.children
+      Primary.content
+      Primary.id
+      Primary.next_elem
+      Primary.prev_elem
+      Primary.raw
+      Primary.tag
+      Primary.tail
+      Primary.text_content
+      Primary.title
+      Primary.tostring
+   
+   

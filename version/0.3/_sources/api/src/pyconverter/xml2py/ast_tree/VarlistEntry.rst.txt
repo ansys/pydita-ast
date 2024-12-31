@@ -1,0 +1,289 @@
+
+
+:class:`VarlistEntry`
+=====================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.VarlistEntry(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the variable list entry element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: VarlistEntry
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~py_term`
+            - Python-compatible term.
+          * - :py:attr:`~py_text`
+            - Remove mention of graphical interaction.
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~parm_types`
+            - One or more parameter types.
+          * - :py:attr:`~term`
+            - Term of the element.
+          * - :py:attr:`~text`
+            - Text of the element.
+          * - :py:attr:`~active`
+            - Return if this argument is active.
+          * - :py:attr:`~is_arg`
+            - Return ``True`` when this variable list is for an argument.
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import VarlistEntry
+
+Property detail
+---------------
+.. py:property:: parm_types
+   
+   One or more parameter types.
+
+   This is guessed from any subvarlists. If unavailable, then it's guessed
+   from the description of the variable.
+
+   This is either a string, float, or integer (or some combination thereof).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: term
+   
+   Term of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: text
+   
+   Text of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: active
+   
+   Return if this argument is active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: is_arg
+   
+   Return ``True`` when this variable list is for an argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: py_term(links=None, base_url=None)
+
+   
+   Python-compatible term.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__()
+
+.. py:method:: py_text(links=None, base_url=None, fcache=None)
+
+   
+   Remove mention of graphical interaction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: to_rst(indent='', max_length=100, links=None, base_url=None, fcache=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

@@ -1,0 +1,6 @@
+rec\_find
+=========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. automethod:: Refname.rec_find

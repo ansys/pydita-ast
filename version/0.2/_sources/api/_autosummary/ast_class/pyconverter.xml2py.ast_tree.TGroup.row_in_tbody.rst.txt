@@ -1,0 +1,6 @@
+row\_in\_tbody
+==============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: TGroup.row_in_tbody

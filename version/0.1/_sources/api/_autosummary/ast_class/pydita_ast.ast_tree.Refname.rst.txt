@@ -1,0 +1,68 @@
+﻿Refname
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Refname
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Refname.find
+      
+      
+      Refname.find_all
+      
+      
+      Refname.get
+      
+      
+      Refname.has_children
+      
+      
+      Refname.print_tree
+      
+      
+      Refname.rec_find
+      
+      
+      Refname.to_rst
+      
+      
+      Refname.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Refname.added
+      Refname.any_isalnum
+      Refname.args
+      Refname.children
+      Refname.content
+      Refname.id
+      Refname.next_elem
+      Refname.prev_elem
+      Refname.raw
+      Refname.raw_args
+      Refname.tag
+      Refname.tail
+      Refname.terms
+      Refname.text_content
+      Refname.title
+      Refname.tostring
+   
+   

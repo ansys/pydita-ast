@@ -1,0 +1,6 @@
+﻿get\_paths
+==========
+
+.. currentmodule:: pydita_ast.directory_format
+
+.. autofunction:: get_paths

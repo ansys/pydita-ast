@@ -1,0 +1,66 @@
+﻿Emphasis
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Emphasis
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Emphasis.find
+      
+      
+      Emphasis.find_all
+      
+      
+      Emphasis.get
+      
+      
+      Emphasis.has_children
+      
+      
+      Emphasis.print_tree
+      
+      
+      Emphasis.rec_find
+      
+      
+      Emphasis.to_rst
+      
+      
+      Emphasis.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Emphasis.added
+      Emphasis.any_isalnum
+      Emphasis.children
+      Emphasis.content
+      Emphasis.id
+      Emphasis.next_elem
+      Emphasis.prev_elem
+      Emphasis.raw
+      Emphasis.role
+      Emphasis.tag
+      Emphasis.tail
+      Emphasis.text_content
+      Emphasis.title
+      Emphasis.tostring
+   
+   

@@ -1,0 +1,6 @@
+﻿load\_docu\_global
+==================
+
+.. currentmodule:: pyconverter.xml2py.load_xml_doc
+
+.. autofunction:: load_docu_global

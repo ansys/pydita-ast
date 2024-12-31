@@ -1,0 +1,65 @@
+﻿Term
+====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Term
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Term.find
+      
+      
+      Term.find_all
+      
+      
+      Term.get
+      
+      
+      Term.has_children
+      
+      
+      Term.print_tree
+      
+      
+      Term.rec_find
+      
+      
+      Term.to_rst
+      
+      
+      Term.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Term.added
+      Term.any_isalnum
+      Term.children
+      Term.content
+      Term.id
+      Term.next_elem
+      Term.prev_elem
+      Term.raw
+      Term.tag
+      Term.tail
+      Term.text_content
+      Term.title
+      Term.tostring
+   
+   

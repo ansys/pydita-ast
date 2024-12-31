@@ -1,0 +1,6 @@
+raw
+===
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Note.raw

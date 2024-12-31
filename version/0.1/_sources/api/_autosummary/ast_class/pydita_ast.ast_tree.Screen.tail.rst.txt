@@ -1,0 +1,6 @@
+tail
+====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Screen.tail

@@ -1,0 +1,94 @@
+
+
+:class:`OrderedList`
+====================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.OrderedList(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the ordered list element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OrderedList
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import OrderedList
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(indent='', max_length=100, links=None, base_url=None)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

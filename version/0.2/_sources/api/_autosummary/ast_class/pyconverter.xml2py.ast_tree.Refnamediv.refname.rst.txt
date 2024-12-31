@@ -1,0 +1,6 @@
+refname
+=======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Refnamediv.refname

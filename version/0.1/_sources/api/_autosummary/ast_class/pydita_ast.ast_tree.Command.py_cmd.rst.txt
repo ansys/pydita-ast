@@ -1,0 +1,6 @@
+py\_cmd
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Command.py_cmd

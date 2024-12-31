@@ -1,0 +1,6 @@
+tbody
+=====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: TGroup.tbody

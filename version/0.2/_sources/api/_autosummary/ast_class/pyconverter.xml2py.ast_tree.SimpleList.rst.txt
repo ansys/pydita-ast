@@ -1,0 +1,65 @@
+﻿SimpleList
+==========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: SimpleList
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      SimpleList.find
+      
+      
+      SimpleList.find_all
+      
+      
+      SimpleList.get
+      
+      
+      SimpleList.has_children
+      
+      
+      SimpleList.print_tree
+      
+      
+      SimpleList.rec_find
+      
+      
+      SimpleList.to_rst
+      
+      
+      SimpleList.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      SimpleList.added
+      SimpleList.any_isalnum
+      SimpleList.children
+      SimpleList.content
+      SimpleList.id
+      SimpleList.next_elem
+      SimpleList.prev_elem
+      SimpleList.raw
+      SimpleList.tag
+      SimpleList.tail
+      SimpleList.text_content
+      SimpleList.title
+      SimpleList.tostring
+   
+   

@@ -1,0 +1,65 @@
+﻿Example
+=======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Example
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Example.find
+      
+      
+      Example.find_all
+      
+      
+      Example.get
+      
+      
+      Example.has_children
+      
+      
+      Example.print_tree
+      
+      
+      Example.rec_find
+      
+      
+      Example.to_rst
+      
+      
+      Example.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Example.added
+      Example.any_isalnum
+      Example.children
+      Example.content
+      Example.id
+      Example.next_elem
+      Example.prev_elem
+      Example.raw
+      Example.tag
+      Example.tail
+      Example.text_content
+      Example.title
+      Example.tostring
+   
+   

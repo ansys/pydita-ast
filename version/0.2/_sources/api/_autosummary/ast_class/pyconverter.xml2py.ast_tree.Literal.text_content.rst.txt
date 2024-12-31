@@ -1,0 +1,6 @@
+text\_content
+=============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Literal.text_content

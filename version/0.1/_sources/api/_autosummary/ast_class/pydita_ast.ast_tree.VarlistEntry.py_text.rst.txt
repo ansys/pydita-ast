@@ -1,0 +1,6 @@
+py\_text
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: VarlistEntry.py_text

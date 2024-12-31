@@ -1,0 +1,127 @@
+
+
+:class:`Graphic`
+================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Graphic(element, parse_children=True)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the graphic element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Graphic
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~to_rst`
+            - Return a string to enable converting the element to an RST format.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~entityref`
+            - Value of the ``entityref`` parameter contained in the graphic element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Graphic
+
+Property detail
+---------------
+.. py:property:: entityref
+   
+   Value of the ``entityref`` parameter contained in the graphic element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: to_rst(fcache, indent='', max_length=100)
+
+   
+   Return a string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

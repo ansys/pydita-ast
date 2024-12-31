@@ -1,0 +1,6 @@
+is\_arg
+=======
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: VarlistEntry.is_arg

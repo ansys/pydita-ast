@@ -1,0 +1,6 @@
+has\_children
+=============
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: InlineGraphic.has_children

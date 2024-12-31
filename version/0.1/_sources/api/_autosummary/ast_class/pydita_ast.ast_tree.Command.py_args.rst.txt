@@ -1,0 +1,6 @@
+py\_args
+========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: Command.py_args

@@ -1,0 +1,6 @@
+lib\_import
+===========
+
+.. currentmodule:: pyconverter.xml2py.custom_functions
+
+.. autoproperty:: CustomFunctions.lib_import

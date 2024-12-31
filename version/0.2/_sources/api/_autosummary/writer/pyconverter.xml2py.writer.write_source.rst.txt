@@ -1,0 +1,6 @@
+﻿write\_source
+=============
+
+.. currentmodule:: pyconverter.xml2py.writer
+
+.. autofunction:: write_source

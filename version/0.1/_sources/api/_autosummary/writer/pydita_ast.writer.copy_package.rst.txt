@@ -1,0 +1,6 @@
+﻿copy\_package
+=============
+
+.. currentmodule:: pydita_ast.writer
+
+.. autofunction:: copy_package

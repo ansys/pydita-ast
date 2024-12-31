@@ -1,0 +1,66 @@
+﻿TBody
+=====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: TBody
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      TBody.find
+      
+      
+      TBody.find_all
+      
+      
+      TBody.get
+      
+      
+      TBody.has_children
+      
+      
+      TBody.print_tree
+      
+      
+      TBody.rec_find
+      
+      
+      TBody.to_rst
+      
+      
+      TBody.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      TBody.added
+      TBody.any_isalnum
+      TBody.children
+      TBody.content
+      TBody.id
+      TBody.next_elem
+      TBody.prev_elem
+      TBody.raw
+      TBody.rows
+      TBody.tag
+      TBody.tail
+      TBody.text_content
+      TBody.title
+      TBody.tostring
+   
+   

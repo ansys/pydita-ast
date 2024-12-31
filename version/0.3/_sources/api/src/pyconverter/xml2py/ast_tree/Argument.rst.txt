@@ -1,0 +1,288 @@
+
+
+:class:`Argument`
+=================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Argument(element: str | Element, initial_argument: List, description: Element | str | None = None)
+
+   
+   Argument object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Argument
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~rec_find`
+            - Find the first type matching a given type string recursively.
+          * - :py:attr:`~str_types`
+            - String representation of the parameter types.
+          * - :py:attr:`~resized_description`
+            - Resize the description to a maximum length.
+          * - :py:attr:`~to_py_docstring`
+            - Return a list of string to enable converting the element to an RST format.
+          * - :py:attr:`~to_py_signature`
+            - Return the Python signature of the argument.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~py_arg_name`
+            - Python-compatible term.
+          * - :py:attr:`~is_arg_elipsis`
+            - Check if the argument is an elipsis.
+          * - :py:attr:`~multiple_args`
+            - 
+          * - :py:attr:`~types`
+            - One or more parameter types.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Argument
+
+Property detail
+---------------
+.. py:property:: py_arg_name
+   :type: str
+
+   
+   Python-compatible term.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: is_arg_elipsis
+   
+   Check if the argument is an elipsis.
+
+
+
+
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           True if the argument is an elipsis, False otherwise.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: multiple_args
+
+.. py:property:: types
+   :type: List[type]
+
+   
+   One or more parameter types.
+
+   This is guessed from any subvarlists. If unavailable, then it's guessed
+   from the description of the variable.
+
+   This is either a string, float, or integer (or some combination thereof).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: rec_find(_type: str, terms=None) -> Element | None
+
+   
+   Find the first type matching a given type string recursively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: str_types(join_str: str) -> str
+
+   
+   String representation of the parameter types.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: resized_description(description: str | None = None, max_length: int = 100, indent: str = '') -> List[str]
+
+   
+   Resize the description to a maximum length.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: to_py_docstring(max_length=100, indent='', links=None, base_url=None, fcache=None) -> List[str]
+
+   
+   Return a list of string to enable converting the element to an RST format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: to_py_signature() -> str
+
+   
+   Return the Python signature of the argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+

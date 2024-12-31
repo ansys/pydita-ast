@@ -1,0 +1,67 @@
+﻿OLink
+=====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: OLink
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      OLink.find
+      
+      
+      OLink.find_all
+      
+      
+      OLink.get
+      
+      
+      OLink.has_children
+      
+      
+      OLink.print_tree
+      
+      
+      OLink.rec_find
+      
+      
+      OLink.to_rst
+      
+      
+      OLink.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      OLink.added
+      OLink.any_isalnum
+      OLink.children
+      OLink.content
+      OLink.id
+      OLink.next_elem
+      OLink.prev_elem
+      OLink.raw
+      OLink.tag
+      OLink.tail
+      OLink.targetdoc
+      OLink.targetptr
+      OLink.text_content
+      OLink.title
+      OLink.tostring
+   
+   

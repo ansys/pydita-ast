@@ -1,0 +1,1384 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The ast_tree.py module &#8212; PyConverter-XML2Py</title>
+  
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/css/ansys_sphinx_theme.css?v=47841aec" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  
+    <link href="../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
+  
+    <script src="../../../../../_static/documentation_options.js?v=f129cdf0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/js/table.js?v=b64f5182"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/src/pyconverter/xml2py/ast_tree/index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://pyconverter-xml2py.docs.pyansys.com/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="icon" href="../../../../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="NameMap" href="NameMap.html" />
+    <link rel="prev" title="The utils.py module" href="../utils/utils/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <link rel="canonical" href="https://pyconverter-xml2py.docs.pyansys.com/version/stable/api/src/pyconverter/xml2py/ast_tree/index.html" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/pyansys_logo_transparent_black.png" class="logo__image only-light" alt="PyConverter-XML2Py - Home"/>
+    <script>document.write(`<img src="../../../../../_static/pyansys_logo_transparent_white.png" class="logo__image only-dark" alt="PyConverter-XML2Py - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../getting_started/index.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../user_guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../contributing/index.html">
+    Contribute
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<div class="search-bar" id="search-bar">
+    <form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false"/>
+      <span class="search-button__kbd-shortcut">
+        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+      </span>
+    </form>
+    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
+</div>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pyconverter-xml2py" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pyconverter-xml2py/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<div class="search-bar" id="search-bar">
+    <form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false"/>
+      <span class="search-button__kbd-shortcut">
+        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+      </span>
+    </form>
+    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
+</div>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+  
+    <div id="announcement_msg"></div>
+<script>
+  fetch("announcement.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(
+      (text) => (document.getElementById("announcement_msg").innerHTML = text),
+    )
+    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+</script>
+  
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../getting_started/index.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../user_guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../contributing/index.html">
+    Contribute
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pyconverter-xml2py" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pyconverter-xml2py/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html"><span class="nf nf-md-package"></span> src.pyconverter.xml2py</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../utils/index.html"> <span class="nf nf-md-package"></span> utils</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#"> <span class="nf nf-fa-file"></span> ast_tree</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="NameMap.html"> <span class="nf nf-cod-symbol_class"></span> NameMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Element.html"> <span class="nf nf-cod-symbol_class"></span> Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ItemizedList.html"> <span class="nf nf-cod-symbol_class"></span> ItemizedList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimpleList.html"> <span class="nf nf-cod-symbol_class"></span> SimpleList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Member.html"> <span class="nf nf-cod-symbol_class"></span> Member</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OrderedList.html"> <span class="nf nf-cod-symbol_class"></span> OrderedList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ListItem.html"> <span class="nf nf-cod-symbol_class"></span> ListItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FileName.html"> <span class="nf nf-cod-symbol_class"></span> FileName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OLink.html"> <span class="nf nf-cod-symbol_class"></span> OLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Paragraph.html"> <span class="nf nf-cod-symbol_class"></span> Paragraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Phrase.html"> <span class="nf nf-cod-symbol_class"></span> Phrase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Structname.html"> <span class="nf nf-cod-symbol_class"></span> Structname</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Title.html"> <span class="nf nf-cod-symbol_class"></span> Title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Emphasis.html"> <span class="nf nf-cod-symbol_class"></span> Emphasis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Example.html"> <span class="nf nf-cod-symbol_class"></span> Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InformalExample.html"> <span class="nf nf-cod-symbol_class"></span> InformalExample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GuiMenu.html"> <span class="nf nf-cod-symbol_class"></span> GuiMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Replaceable.html"> <span class="nf nf-cod-symbol_class"></span> Replaceable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ProgramListing.html"> <span class="nf nf-cod-symbol_class"></span> ProgramListing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Variablelist.html"> <span class="nf nf-cod-symbol_class"></span> Variablelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RefSection.html"> <span class="nf nf-cod-symbol_class"></span> RefSection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VarlistEntry.html"> <span class="nf nf-cod-symbol_class"></span> VarlistEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Term.html"> <span class="nf nf-cod-symbol_class"></span> Term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GuiLabel.html"> <span class="nf nf-cod-symbol_class"></span> GuiLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GuiMenuItem.html"> <span class="nf nf-cod-symbol_class"></span> GuiMenuItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SuperScript.html"> <span class="nf nf-cod-symbol_class"></span> SuperScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Code.html"> <span class="nf nf-cod-symbol_class"></span> Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Math.html"> <span class="nf nf-cod-symbol_class"></span> Math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InlineEquation.html"> <span class="nf nf-cod-symbol_class"></span> InlineEquation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SubScript.html"> <span class="nf nf-cod-symbol_class"></span> SubScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InlineGraphic.html"> <span class="nf nf-cod-symbol_class"></span> InlineGraphic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Quote.html"> <span class="nf nf-cod-symbol_class"></span> Quote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Link.html"> <span class="nf nf-cod-symbol_class"></span> Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XRef.html"> <span class="nf nf-cod-symbol_class"></span> XRef</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UserInput.html"> <span class="nf nf-cod-symbol_class"></span> UserInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Screen.html"> <span class="nf nf-cod-symbol_class"></span> Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Literal.html"> <span class="nf nf-cod-symbol_class"></span> Literal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Caution.html"> <span class="nf nf-cod-symbol_class"></span> Caution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Graphic.html"> <span class="nf nf-cod-symbol_class"></span> Graphic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Function.html"> <span class="nf nf-cod-symbol_class"></span> Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Note.html"> <span class="nf nf-cod-symbol_class"></span> Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BlockQuote.html"> <span class="nf nf-cod-symbol_class"></span> BlockQuote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RefMeta.html"> <span class="nf nf-cod-symbol_class"></span> RefMeta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IndexTerm.html"> <span class="nf nf-cod-symbol_class"></span> IndexTerm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Primary.html"> <span class="nf nf-cod-symbol_class"></span> Primary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TGroup.html"> <span class="nf nf-cod-symbol_class"></span> TGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Table.html"> <span class="nf nf-cod-symbol_class"></span> Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refentrytitle.html"> <span class="nf nf-cod-symbol_class"></span> Refentrytitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refnamediv.html"> <span class="nf nf-cod-symbol_class"></span> Refnamediv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refname.html"> <span class="nf nf-cod-symbol_class"></span> Refname</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refpurpose.html"> <span class="nf nf-cod-symbol_class"></span> Refpurpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refclass.html"> <span class="nf nf-cod-symbol_class"></span> Refclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Application.html"> <span class="nf nf-cod-symbol_class"></span> Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refsect1.html"> <span class="nf nf-cod-symbol_class"></span> Refsect1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Command.html"> <span class="nf nf-cod-symbol_class"></span> Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ComputerOutput.html"> <span class="nf nf-cod-symbol_class"></span> ComputerOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Figure.html"> <span class="nf nf-cod-symbol_class"></span> Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Footnote.html"> <span class="nf nf-cod-symbol_class"></span> Footnote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Footnoteref.html"> <span class="nf nf-cod-symbol_class"></span> Footnoteref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Formalpara.html"> <span class="nf nf-cod-symbol_class"></span> Formalpara</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Glossterm.html"> <span class="nf nf-cod-symbol_class"></span> Glossterm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GuiButton.html"> <span class="nf nf-cod-symbol_class"></span> GuiButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GuiIcon.html"> <span class="nf nf-cod-symbol_class"></span> GuiIcon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Highlights.html"> <span class="nf nf-cod-symbol_class"></span> Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Important.html"> <span class="nf nf-cod-symbol_class"></span> Important</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InformalEquation.html"> <span class="nf nf-cod-symbol_class"></span> InformalEquation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Interface.html"> <span class="nf nf-cod-symbol_class"></span> Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Markup.html"> <span class="nf nf-cod-symbol_class"></span> Markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mediaobject.html"> <span class="nf nf-cod-symbol_class"></span> Mediaobject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Option.html"> <span class="nf nf-cod-symbol_class"></span> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refsect3.html"> <span class="nf nf-cod-symbol_class"></span> Refsect3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Refsynopsisdiv.html"> <span class="nf nf-cod-symbol_class"></span> Refsynopsisdiv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sidebar.html"> <span class="nf nf-cod-symbol_class"></span> Sidebar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XMLType.html"> <span class="nf nf-cod-symbol_class"></span> XMLType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XMLWarning.html"> <span class="nf nf-cod-symbol_class"></span> XMLWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ClassName.html"> <span class="nf nf-cod-symbol_class"></span> ClassName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Imageobject.html"> <span class="nf nf-cod-symbol_class"></span> Imageobject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InformalFigure.html"> <span class="nf nf-cod-symbol_class"></span> InformalFigure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Envar.html"> <span class="nf nf-cod-symbol_class"></span> Envar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ImageData.html"> <span class="nf nf-cod-symbol_class"></span> ImageData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColSpec.html"> <span class="nf nf-cod-symbol_class"></span> ColSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TBody.html"> <span class="nf nf-cod-symbol_class"></span> TBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Entry.html"> <span class="nf nf-cod-symbol_class"></span> Entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Row.html"> <span class="nf nf-cod-symbol_class"></span> Row</a></li>
+<li class="toctree-l3"><a class="reference internal" href="THead.html"> <span class="nf nf-cod-symbol_class"></span> THead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Remark.html"> <span class="nf nf-cod-symbol_class"></span> Remark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LiteralLayout.html"> <span class="nf nf-cod-symbol_class"></span> LiteralLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CiteTitle.html"> <span class="nf nf-cod-symbol_class"></span> CiteTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ULink.html"> <span class="nf nf-cod-symbol_class"></span> ULink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SegTitle.html"> <span class="nf nf-cod-symbol_class"></span> SegTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter.html"> <span class="nf nf-cod-symbol_class"></span> Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Section1.html"> <span class="nf nf-cod-symbol_class"></span> Section1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ProductName.html"> <span class="nf nf-cod-symbol_class"></span> ProductName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArgumentList.html"> <span class="nf nf-cod-symbol_class"></span> ArgumentList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Argument.html"> <span class="nf nf-cod-symbol_class"></span> Argument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XMLCommand.html"> <span class="nf nf-cod-symbol_class"></span> XMLCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InformalTable.html"> <span class="nf nf-cod-symbol_class"></span> InformalTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OxygenXmlTree.html"> <span class="nf nf-cod-symbol_class"></span> OxygenXmlTree</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/index.html"> <span class="nf nf-fa-file"></span> cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_functions/index.html"> <span class="nf nf-fa-file"></span> custom_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../directory_format/index.html"> <span class="nf nf-fa-file"></span> directory_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/index.html"> <span class="nf nf-fa-file"></span> download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../formatter/index.html"> <span class="nf nf-fa-file"></span> formatter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../load_xml_doc/index.html"> <span class="nf nf-fa-file"></span> load_xml_doc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../version_variables/index.html"> <span class="nf nf-fa-file"></span> version_variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../writer/index.html"> <span class="nf nf-fa-file"></span> writer</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+         
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="https://docs.pyansys.com/" class="nav-link">PyAnsys</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a
+        href="../../../../../index.html"
+        class="nav-link"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../../index.html" class="nav-link">API reference</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../index.html" class="nav-link">The <code class="docutils literal notranslate"><span class="pre">src.pyconverter.xml2py</span></code> library</a>
+    </li>
+      
+    <li class="breadcrumb-item active" aria-current="page">The <code class="docutils literal notranslate"><span class="pre">ast_tree.py</span></code> module</li>
+    
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-src.pyconverter.xml2py.ast_tree">
+<span id="the-ast-tree-py-module"></span><h1>The <code class="docutils literal notranslate"><span class="pre">ast_tree.py</span></code> module<a class="headerlink" href="#module-src.pyconverter.xml2py.ast_tree" title="Link to this heading">#</a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Classes</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="NameMap.html#src.pyconverter.xml2py.ast_tree.NameMap" title="src.pyconverter.xml2py.ast_tree.NameMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NameMap</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Element.html#src.pyconverter.xml2py.ast_tree.Element" title="src.pyconverter.xml2py.ast_tree.Element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Element</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ItemizedList.html#src.pyconverter.xml2py.ast_tree.ItemizedList" title="src.pyconverter.xml2py.ast_tree.ItemizedList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ItemizedList</span></code></a></p></td>
+<td><p>Provides the itemized list element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="SimpleList.html#src.pyconverter.xml2py.ast_tree.SimpleList" title="src.pyconverter.xml2py.ast_tree.SimpleList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimpleList</span></code></a></p></td>
+<td><p>Provides the simple itemized list element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Member.html#src.pyconverter.xml2py.ast_tree.Member" title="src.pyconverter.xml2py.ast_tree.Member"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Member</span></code></a></p></td>
+<td><p>Provides the member element for a simple itemized list.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="OrderedList.html#src.pyconverter.xml2py.ast_tree.OrderedList" title="src.pyconverter.xml2py.ast_tree.OrderedList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OrderedList</span></code></a></p></td>
+<td><p>Provides the ordered list element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ListItem.html#src.pyconverter.xml2py.ast_tree.ListItem" title="src.pyconverter.xml2py.ast_tree.ListItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ListItem</span></code></a></p></td>
+<td><p>Provides the list item element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="FileName.html#src.pyconverter.xml2py.ast_tree.FileName" title="src.pyconverter.xml2py.ast_tree.FileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileName</span></code></a></p></td>
+<td><p>Provides the filename element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="OLink.html#src.pyconverter.xml2py.ast_tree.OLink" title="src.pyconverter.xml2py.ast_tree.OLink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OLink</span></code></a></p></td>
+<td><p>Provides the external link element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Paragraph.html#src.pyconverter.xml2py.ast_tree.Paragraph" title="src.pyconverter.xml2py.ast_tree.Paragraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Paragraph</span></code></a></p></td>
+<td><p>Provides the paragraph element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Phrase.html#src.pyconverter.xml2py.ast_tree.Phrase" title="src.pyconverter.xml2py.ast_tree.Phrase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Phrase</span></code></a></p></td>
+<td><p>Provides the phrase element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Structname.html#src.pyconverter.xml2py.ast_tree.Structname" title="src.pyconverter.xml2py.ast_tree.Structname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Structname</span></code></a></p></td>
+<td><p>Provides the structure name element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Title.html#src.pyconverter.xml2py.ast_tree.Title" title="src.pyconverter.xml2py.ast_tree.Title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Title</span></code></a></p></td>
+<td><p>Provides the title element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Emphasis.html#src.pyconverter.xml2py.ast_tree.Emphasis" title="src.pyconverter.xml2py.ast_tree.Emphasis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Emphasis</span></code></a></p></td>
+<td><p>Provides the emphasis element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Example.html#src.pyconverter.xml2py.ast_tree.Example" title="src.pyconverter.xml2py.ast_tree.Example"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Example</span></code></a></p></td>
+<td><p>Provides the example element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InformalExample.html#src.pyconverter.xml2py.ast_tree.InformalExample" title="src.pyconverter.xml2py.ast_tree.InformalExample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InformalExample</span></code></a></p></td>
+<td><p>Provides the informal example element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="GuiMenu.html#src.pyconverter.xml2py.ast_tree.GuiMenu" title="src.pyconverter.xml2py.ast_tree.GuiMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GuiMenu</span></code></a></p></td>
+<td><p>Provides the GUI menu element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Replaceable.html#src.pyconverter.xml2py.ast_tree.Replaceable" title="src.pyconverter.xml2py.ast_tree.Replaceable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Replaceable</span></code></a></p></td>
+<td><p>Provides the replaceable element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ProgramListing.html#src.pyconverter.xml2py.ast_tree.ProgramListing" title="src.pyconverter.xml2py.ast_tree.ProgramListing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProgramListing</span></code></a></p></td>
+<td><p>Provides the program listing element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Variablelist.html#src.pyconverter.xml2py.ast_tree.Variablelist" title="src.pyconverter.xml2py.ast_tree.Variablelist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Variablelist</span></code></a></p></td>
+<td><p>Provides the variable list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RefSection.html#src.pyconverter.xml2py.ast_tree.RefSection" title="src.pyconverter.xml2py.ast_tree.RefSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RefSection</span></code></a></p></td>
+<td><p>Provides the reference section element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="VarlistEntry.html#src.pyconverter.xml2py.ast_tree.VarlistEntry" title="src.pyconverter.xml2py.ast_tree.VarlistEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarlistEntry</span></code></a></p></td>
+<td><p>Provides the variable list entry element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Term.html#src.pyconverter.xml2py.ast_tree.Term" title="src.pyconverter.xml2py.ast_tree.Term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Term</span></code></a></p></td>
+<td><p>Provides the term element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="GuiLabel.html#src.pyconverter.xml2py.ast_tree.GuiLabel" title="src.pyconverter.xml2py.ast_tree.GuiLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GuiLabel</span></code></a></p></td>
+<td><p>Provides the GUI label element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="GuiMenuItem.html#src.pyconverter.xml2py.ast_tree.GuiMenuItem" title="src.pyconverter.xml2py.ast_tree.GuiMenuItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GuiMenuItem</span></code></a></p></td>
+<td><p>Provides the GUI menu item element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="SuperScript.html#src.pyconverter.xml2py.ast_tree.SuperScript" title="src.pyconverter.xml2py.ast_tree.SuperScript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SuperScript</span></code></a></p></td>
+<td><p>Provides the superscript element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Code.html#src.pyconverter.xml2py.ast_tree.Code" title="src.pyconverter.xml2py.ast_tree.Code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Code</span></code></a></p></td>
+<td><p>Provides the code element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Math.html#src.pyconverter.xml2py.ast_tree.Math" title="src.pyconverter.xml2py.ast_tree.Math"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Math</span></code></a></p></td>
+<td><p>Provides the math element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InlineEquation.html#src.pyconverter.xml2py.ast_tree.InlineEquation" title="src.pyconverter.xml2py.ast_tree.InlineEquation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InlineEquation</span></code></a></p></td>
+<td><p>Provides the inline equation element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="SubScript.html#src.pyconverter.xml2py.ast_tree.SubScript" title="src.pyconverter.xml2py.ast_tree.SubScript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SubScript</span></code></a></p></td>
+<td><p>Provides the subscript element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InlineGraphic.html#src.pyconverter.xml2py.ast_tree.InlineGraphic" title="src.pyconverter.xml2py.ast_tree.InlineGraphic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InlineGraphic</span></code></a></p></td>
+<td><p>Provides the inline graphic element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Quote.html#src.pyconverter.xml2py.ast_tree.Quote" title="src.pyconverter.xml2py.ast_tree.Quote"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quote</span></code></a></p></td>
+<td><p>Provides the quote element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Link.html#src.pyconverter.xml2py.ast_tree.Link" title="src.pyconverter.xml2py.ast_tree.Link"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Link</span></code></a></p></td>
+<td><p>Provides the link element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="XRef.html#src.pyconverter.xml2py.ast_tree.XRef" title="src.pyconverter.xml2py.ast_tree.XRef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XRef</span></code></a></p></td>
+<td><p>Provides the cross reference element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="UserInput.html#src.pyconverter.xml2py.ast_tree.UserInput" title="src.pyconverter.xml2py.ast_tree.UserInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserInput</span></code></a></p></td>
+<td><p>Provides the user input element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Screen.html#src.pyconverter.xml2py.ast_tree.Screen" title="src.pyconverter.xml2py.ast_tree.Screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Screen</span></code></a></p></td>
+<td><p>Provides the screen element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Literal.html#src.pyconverter.xml2py.ast_tree.Literal" title="src.pyconverter.xml2py.ast_tree.Literal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code></a></p></td>
+<td><p>Provides the literal output element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Caution.html#src.pyconverter.xml2py.ast_tree.Caution" title="src.pyconverter.xml2py.ast_tree.Caution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Caution</span></code></a></p></td>
+<td><p>Provides the caution element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Graphic.html#src.pyconverter.xml2py.ast_tree.Graphic" title="src.pyconverter.xml2py.ast_tree.Graphic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphic</span></code></a></p></td>
+<td><p>Provides the graphic element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Function.html#src.pyconverter.xml2py.ast_tree.Function" title="src.pyconverter.xml2py.ast_tree.Function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Function</span></code></a></p></td>
+<td><p>Provides the function element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Note.html#src.pyconverter.xml2py.ast_tree.Note" title="src.pyconverter.xml2py.ast_tree.Note"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Note</span></code></a></p></td>
+<td><p>Provides the note element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="BlockQuote.html#src.pyconverter.xml2py.ast_tree.BlockQuote" title="src.pyconverter.xml2py.ast_tree.BlockQuote"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BlockQuote</span></code></a></p></td>
+<td><p>Provides the block quote element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RefMeta.html#src.pyconverter.xml2py.ast_tree.RefMeta" title="src.pyconverter.xml2py.ast_tree.RefMeta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RefMeta</span></code></a></p></td>
+<td><p>Provides the reference metadata element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="IndexTerm.html#src.pyconverter.xml2py.ast_tree.IndexTerm" title="src.pyconverter.xml2py.ast_tree.IndexTerm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexTerm</span></code></a></p></td>
+<td><p>Provides the index term element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Primary.html#src.pyconverter.xml2py.ast_tree.Primary" title="src.pyconverter.xml2py.ast_tree.Primary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Primary</span></code></a></p></td>
+<td><p>Provides the primary element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="TGroup.html#src.pyconverter.xml2py.ast_tree.TGroup" title="src.pyconverter.xml2py.ast_tree.TGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TGroup</span></code></a></p></td>
+<td><p>Provides the tgroup element, which contains the header and body rows of a table.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Table.html#src.pyconverter.xml2py.ast_tree.Table" title="src.pyconverter.xml2py.ast_tree.Table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a></p></td>
+<td><p>Provides the table element</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Refentrytitle.html#src.pyconverter.xml2py.ast_tree.Refentrytitle" title="src.pyconverter.xml2py.ast_tree.Refentrytitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refentrytitle</span></code></a></p></td>
+<td><p>Provides the title of the reference entry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Refnamediv.html#src.pyconverter.xml2py.ast_tree.Refnamediv" title="src.pyconverter.xml2py.ast_tree.Refnamediv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refnamediv</span></code></a></p></td>
+<td><p>Provides the refnamediv element, which contains the name,</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Refname.html#src.pyconverter.xml2py.ast_tree.Refname" title="src.pyconverter.xml2py.ast_tree.Refname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refname</span></code></a></p></td>
+<td><p>Provides the refname element which contains</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Refpurpose.html#src.pyconverter.xml2py.ast_tree.Refpurpose" title="src.pyconverter.xml2py.ast_tree.Refpurpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refpurpose</span></code></a></p></td>
+<td><p>Provides the refpurpose element, which contains</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Refclass.html#src.pyconverter.xml2py.ast_tree.Refclass" title="src.pyconverter.xml2py.ast_tree.Refclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refclass</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Application.html#src.pyconverter.xml2py.ast_tree.Application" title="src.pyconverter.xml2py.ast_tree.Application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Application</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Refsect1.html#src.pyconverter.xml2py.ast_tree.Refsect1" title="src.pyconverter.xml2py.ast_tree.Refsect1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refsect1</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Command.html#src.pyconverter.xml2py.ast_tree.Command" title="src.pyconverter.xml2py.ast_tree.Command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Command</span></code></a></p></td>
+<td><p>Provides the command element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ComputerOutput.html#src.pyconverter.xml2py.ast_tree.ComputerOutput" title="src.pyconverter.xml2py.ast_tree.ComputerOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputerOutput</span></code></a></p></td>
+<td><p>Provides the computer output element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Figure.html#src.pyconverter.xml2py.ast_tree.Figure" title="src.pyconverter.xml2py.ast_tree.Figure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a></p></td>
+<td><p>Provides the figure element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Footnote.html#src.pyconverter.xml2py.ast_tree.Footnote" title="src.pyconverter.xml2py.ast_tree.Footnote"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Footnote</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Footnoteref.html#src.pyconverter.xml2py.ast_tree.Footnoteref" title="src.pyconverter.xml2py.ast_tree.Footnoteref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Footnoteref</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Formalpara.html#src.pyconverter.xml2py.ast_tree.Formalpara" title="src.pyconverter.xml2py.ast_tree.Formalpara"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Formalpara</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Glossterm.html#src.pyconverter.xml2py.ast_tree.Glossterm" title="src.pyconverter.xml2py.ast_tree.Glossterm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Glossterm</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="GuiButton.html#src.pyconverter.xml2py.ast_tree.GuiButton" title="src.pyconverter.xml2py.ast_tree.GuiButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GuiButton</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="GuiIcon.html#src.pyconverter.xml2py.ast_tree.GuiIcon" title="src.pyconverter.xml2py.ast_tree.GuiIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GuiIcon</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Highlights.html#src.pyconverter.xml2py.ast_tree.Highlights" title="src.pyconverter.xml2py.ast_tree.Highlights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Highlights</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Important.html#src.pyconverter.xml2py.ast_tree.Important" title="src.pyconverter.xml2py.ast_tree.Important"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Important</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InformalEquation.html#src.pyconverter.xml2py.ast_tree.InformalEquation" title="src.pyconverter.xml2py.ast_tree.InformalEquation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InformalEquation</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Interface.html#src.pyconverter.xml2py.ast_tree.Interface" title="src.pyconverter.xml2py.ast_tree.Interface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Interface</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Markup.html#src.pyconverter.xml2py.ast_tree.Markup" title="src.pyconverter.xml2py.ast_tree.Markup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Markup</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Mediaobject.html#src.pyconverter.xml2py.ast_tree.Mediaobject" title="src.pyconverter.xml2py.ast_tree.Mediaobject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mediaobject</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Option.html#src.pyconverter.xml2py.ast_tree.Option" title="src.pyconverter.xml2py.ast_tree.Option"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Option</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Refsect3.html#src.pyconverter.xml2py.ast_tree.Refsect3" title="src.pyconverter.xml2py.ast_tree.Refsect3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refsect3</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Refsynopsisdiv.html#src.pyconverter.xml2py.ast_tree.Refsynopsisdiv" title="src.pyconverter.xml2py.ast_tree.Refsynopsisdiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Refsynopsisdiv</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Sidebar.html#src.pyconverter.xml2py.ast_tree.Sidebar" title="src.pyconverter.xml2py.ast_tree.Sidebar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sidebar</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="XMLType.html#src.pyconverter.xml2py.ast_tree.XMLType" title="src.pyconverter.xml2py.ast_tree.XMLType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLType</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="XMLWarning.html#src.pyconverter.xml2py.ast_tree.XMLWarning" title="src.pyconverter.xml2py.ast_tree.XMLWarning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLWarning</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ClassName.html#src.pyconverter.xml2py.ast_tree.ClassName" title="src.pyconverter.xml2py.ast_tree.ClassName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClassName</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Imageobject.html#src.pyconverter.xml2py.ast_tree.Imageobject" title="src.pyconverter.xml2py.ast_tree.Imageobject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Imageobject</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InformalFigure.html#src.pyconverter.xml2py.ast_tree.InformalFigure" title="src.pyconverter.xml2py.ast_tree.InformalFigure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InformalFigure</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Envar.html#src.pyconverter.xml2py.ast_tree.Envar" title="src.pyconverter.xml2py.ast_tree.Envar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Envar</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ImageData.html#src.pyconverter.xml2py.ast_tree.ImageData" title="src.pyconverter.xml2py.ast_tree.ImageData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageData</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ColSpec.html#src.pyconverter.xml2py.ast_tree.ColSpec" title="src.pyconverter.xml2py.ast_tree.ColSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColSpec</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="TBody.html#src.pyconverter.xml2py.ast_tree.TBody" title="src.pyconverter.xml2py.ast_tree.TBody"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TBody</span></code></a></p></td>
+<td><p>Provides the tbody element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Entry.html#src.pyconverter.xml2py.ast_tree.Entry" title="src.pyconverter.xml2py.ast_tree.Entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Entry</span></code></a></p></td>
+<td><p>Provides the entry element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Row.html#src.pyconverter.xml2py.ast_tree.Row" title="src.pyconverter.xml2py.ast_tree.Row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Row</span></code></a></p></td>
+<td><p>Provides the row element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="THead.html#src.pyconverter.xml2py.ast_tree.THead" title="src.pyconverter.xml2py.ast_tree.THead"><code class="xref py py-obj docutils literal notranslate"><span class="pre">THead</span></code></a></p></td>
+<td><p>Provides the thead element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Remark.html#src.pyconverter.xml2py.ast_tree.Remark" title="src.pyconverter.xml2py.ast_tree.Remark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Remark</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="LiteralLayout.html#src.pyconverter.xml2py.ast_tree.LiteralLayout" title="src.pyconverter.xml2py.ast_tree.LiteralLayout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LiteralLayout</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="CiteTitle.html#src.pyconverter.xml2py.ast_tree.CiteTitle" title="src.pyconverter.xml2py.ast_tree.CiteTitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CiteTitle</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ULink.html#src.pyconverter.xml2py.ast_tree.ULink" title="src.pyconverter.xml2py.ast_tree.ULink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ULink</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="SegTitle.html#src.pyconverter.xml2py.ast_tree.SegTitle" title="src.pyconverter.xml2py.ast_tree.SegTitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SegTitle</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Chapter.html#src.pyconverter.xml2py.ast_tree.Chapter" title="src.pyconverter.xml2py.ast_tree.Chapter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chapter</span></code></a></p></td>
+<td><p>Provides the chapter element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Section1.html#src.pyconverter.xml2py.ast_tree.Section1" title="src.pyconverter.xml2py.ast_tree.Section1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Section1</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ProductName.html#src.pyconverter.xml2py.ast_tree.ProductName" title="src.pyconverter.xml2py.ast_tree.ProductName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProductName</span></code></a></p></td>
+<td><p>Provides the base element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ArgumentList.html#src.pyconverter.xml2py.ast_tree.ArgumentList" title="src.pyconverter.xml2py.ast_tree.ArgumentList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArgumentList</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Argument.html#src.pyconverter.xml2py.ast_tree.Argument" title="src.pyconverter.xml2py.ast_tree.Argument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Argument</span></code></a></p></td>
+<td><p>Argument object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="XMLCommand.html#src.pyconverter.xml2py.ast_tree.XMLCommand" title="src.pyconverter.xml2py.ast_tree.XMLCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLCommand</span></code></a></p></td>
+<td><p>Provides the XML command from the documentation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InformalTable.html#src.pyconverter.xml2py.ast_tree.InformalTable" title="src.pyconverter.xml2py.ast_tree.InformalTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InformalTable</span></code></a></p></td>
+<td><p>Provides the informal table element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="OxygenXmlTree.html#src.pyconverter.xml2py.ast_tree.OxygenXmlTree" title="src.pyconverter.xml2py.ast_tree.OxygenXmlTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OxygenXmlTree</span></code></a></p></td>
+<td><p>Provides for loading an XML file as an AST (abstract syntax tree).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Functions</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.to_py_name" title="ast_tree.to_py_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_py_name</span></code></a></p></td>
+<td><p>Convert to a Python-compatible name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.get_iter_values" title="ast_tree.get_iter_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_iter_values</span></code></a></p></td>
+<td><p>Get the values of an iterator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.get_quant_iter_pos" title="ast_tree.get_quant_iter_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_quant_iter_pos</span></code></a></p></td>
+<td><p>Get the values of a quantity iterator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.to_py_arg_name" title="ast_tree.to_py_arg_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_py_arg_name</span></code></a></p></td>
+<td><p>Python-compatible term</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.get_complete_args_from_initial_arg" title="ast_tree.get_complete_args_from_initial_arg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_complete_args_from_initial_arg</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.is_elipsis" title="ast_tree.is_elipsis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_elipsis</span></code></a></p></td>
+<td><p>Check if a name is an elipsis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.resize_length" title="ast_tree.resize_length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resize_length</span></code></a></p></td>
+<td><p>Resize the length of a text.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.ponctuaction_whitespace" title="ast_tree.ponctuaction_whitespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ponctuaction_whitespace</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.resize_element_list" title="ast_tree.resize_element_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resize_element_list</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.parse_element" title="ast_tree.parse_element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_element</span></code></a></p></td>
+<td><p>Parse a single element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.parse_children" title="ast_tree.parse_children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_children</span></code></a></p></td>
+<td><p>Parse the children of an element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.parse_text" title="ast_tree.parse_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_text</span></code></a></p></td>
+<td><p>Parse a paragraph element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.get_parser" title="ast_tree.get_parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_parser</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Attributes</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.superlatif" title="ast_tree.superlatif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">superlatif</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.parsers" title="ast_tree.parsers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parsers</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.item_needing_links_base_url" title="ast_tree.item_needing_links_base_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">item_needing_links_base_url</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.item_needing_fcache" title="ast_tree.item_needing_fcache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">item_needing_fcache</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.item_needing_all" title="ast_tree.item_needing_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">item_needing_all</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Constants</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.CONV_EQN" title="ast_tree.CONV_EQN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONV_EQN</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.CONST" title="ast_tree.CONST"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONST</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.CLEANUP" title="ast_tree.CLEANUP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CLEANUP</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.PY_ARG_CLEANUP" title="ast_tree.PY_ARG_CLEANUP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PY_ARG_CLEANUP</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.NAME_MAP_GLOB" title="ast_tree.NAME_MAP_GLOB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_MAP_GLOB</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ast_tree.SKIP" title="ast_tree.SKIP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SKIP</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ast_tree.NO_RESIZE_LIST" title="ast_tree.NO_RESIZE_LIST"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NO_RESIZE_LIST</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-detail">
+<h2>Module detail<a class="headerlink" href="#module-detail" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.to_py_name">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">to_py_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.to_py_name" title="Link to this definition">#</a></dt>
+<dd><p>Convert to a Python-compatible name.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.get_iter_values">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">get_iter_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.get_iter_values" title="Link to this definition">#</a></dt>
+<dd><p>Get the values of an iterator.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.get_quant_iter_pos">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">get_quant_iter_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span></span><a class="headerlink" href="#ast_tree.get_quant_iter_pos" title="Link to this definition">#</a></dt>
+<dd><p>Get the values of a quantity iterator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name: str</strong></dt><dd><p>Name of the parameter containing the iterator.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p>Tuple containing the iteration value and the position of the iterator.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.to_py_arg_name">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">to_py_arg_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#ast_tree.to_py_arg_name" title="Link to this definition">#</a></dt>
+<dd><p>Python-compatible term</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.get_complete_args_from_initial_arg">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">get_complete_args_from_initial_arg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elipsis_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ast_tree.get_complete_args_from_initial_arg" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.is_elipsis">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">is_elipsis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#ast_tree.is_elipsis" title="Link to this definition">#</a></dt>
+<dd><p>Check if a name is an elipsis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a></dt><dd><p>True if the argument is an elipsis, False otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.resize_length">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">resize_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsequent_indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.resize_length" title="Link to this definition">#</a></dt>
+<dd><p>Resize the length of a text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.ponctuaction_whitespace">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">ponctuaction_whitespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ponctuation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.ponctuaction_whitespace" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.resize_element_list">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">resize_element_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.resize_element_list" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.parse_element">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">parse_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.parse_element" title="Link to this definition">#</a></dt>
+<dd><p>Parse a single element.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.parse_children">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">parse_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.parse_children" title="Link to this definition">#</a></dt>
+<dd><p>Parse the children of an element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>List of the children of the element.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.parse_text">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">parse_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.parse_text" title="Link to this definition">#</a></dt>
+<dd><p>Parse a paragraph element.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ast_tree.get_parser">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">get_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ast_tree.get_parser" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.CONV_EQN">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">CONV_EQN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#ast_tree.CONV_EQN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.CONST">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">CONST</span></span><a class="headerlink" href="#ast_tree.CONST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.CLEANUP">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">CLEANUP</span></span><a class="headerlink" href="#ast_tree.CLEANUP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.PY_ARG_CLEANUP">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">PY_ARG_CLEANUP</span></span><a class="headerlink" href="#ast_tree.PY_ARG_CLEANUP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.NAME_MAP_GLOB">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">NAME_MAP_GLOB</span></span><a class="headerlink" href="#ast_tree.NAME_MAP_GLOB" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.SKIP">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">SKIP</span></span><a class="headerlink" href="#ast_tree.SKIP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.NO_RESIZE_LIST">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">NO_RESIZE_LIST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Variablelist']</span></em><a class="headerlink" href="#ast_tree.NO_RESIZE_LIST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.superlatif">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">superlatif</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['st',</span> <span class="pre">'nd',</span> <span class="pre">'rd',</span> <span class="pre">'th']</span></em><a class="headerlink" href="#ast_tree.superlatif" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.parsers">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">parsers</span></span><a class="headerlink" href="#ast_tree.parsers" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.item_needing_links_base_url">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">item_needing_links_base_url</span></span><a class="headerlink" href="#ast_tree.item_needing_links_base_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.item_needing_fcache">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">item_needing_fcache</span></span><a class="headerlink" href="#ast_tree.item_needing_fcache" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ast_tree.item_needing_all">
+<span class="sig-prename descclassname"><span class="pre">ast_tree.</span></span><span class="sig-name descname"><span class="pre">item_needing_all</span></span><a class="headerlink" href="#ast_tree.item_needing_all" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-detail">Module detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.to_py_name"><code class="docutils literal notranslate"><span class="pre">to_py_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.get_iter_values"><code class="docutils literal notranslate"><span class="pre">get_iter_values()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.get_quant_iter_pos"><code class="docutils literal notranslate"><span class="pre">get_quant_iter_pos()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.to_py_arg_name"><code class="docutils literal notranslate"><span class="pre">to_py_arg_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.get_complete_args_from_initial_arg"><code class="docutils literal notranslate"><span class="pre">get_complete_args_from_initial_arg()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.is_elipsis"><code class="docutils literal notranslate"><span class="pre">is_elipsis()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.resize_length"><code class="docutils literal notranslate"><span class="pre">resize_length()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.ponctuaction_whitespace"><code class="docutils literal notranslate"><span class="pre">ponctuaction_whitespace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.resize_element_list"><code class="docutils literal notranslate"><span class="pre">resize_element_list()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.parse_element"><code class="docutils literal notranslate"><span class="pre">parse_element()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.parse_children"><code class="docutils literal notranslate"><span class="pre">parse_children()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.parse_text"><code class="docutils literal notranslate"><span class="pre">parse_text()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.get_parser"><code class="docutils literal notranslate"><span class="pre">get_parser()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.CONV_EQN"><code class="docutils literal notranslate"><span class="pre">CONV_EQN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.CONST"><code class="docutils literal notranslate"><span class="pre">CONST</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.CLEANUP"><code class="docutils literal notranslate"><span class="pre">CLEANUP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.PY_ARG_CLEANUP"><code class="docutils literal notranslate"><span class="pre">PY_ARG_CLEANUP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.NAME_MAP_GLOB"><code class="docutils literal notranslate"><span class="pre">NAME_MAP_GLOB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.SKIP"><code class="docutils literal notranslate"><span class="pre">SKIP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.NO_RESIZE_LIST"><code class="docutils literal notranslate"><span class="pre">NO_RESIZE_LIST</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.superlatif"><code class="docutils literal notranslate"><span class="pre">superlatif</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.parsers"><code class="docutils literal notranslate"><span class="pre">parsers</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.item_needing_links_base_url"><code class="docutils literal notranslate"><span class="pre">item_needing_links_base_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.item_needing_fcache"><code class="docutils literal notranslate"><span class="pre">item_needing_fcache</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ast_tree.item_needing_all"><code class="docutils literal notranslate"><span class="pre">item_needing_all</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item"> 
+<div class="tocsection editthispage">
+  <a href="http://github.com/ansys/pyconverter-xml2py/edit/main/to_py_name.py">
+    <i class="fa-solid fa-pencil"></i>
+       Edit
+    on GitHub  
+  </a>
+</div>
+
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../../../_sources/api/src/pyconverter/xml2py/ast_tree/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+<link rel="stylesheet" href="../../../../../_static/css/fuse-search.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+
+<script>
+// Passing the search options to the search.js file
+const SEARCH_OPTIONS = JSON.parse('""');
+const SEARCH_FILE = "../../../../../_static/search.json";
+</script>
+
+
+<script src="../../../../../_static/js/search.js"></script>
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the
+  <a href="https://sphinxdocs.ansys.com/version/stable/index.html"
+    >Ansys Sphinx Theme</a
+  >
+  1.1.5. <br />Last updated on
+  <span id="date"></span>
+</p>
+<script>
+  var options = { day: "numeric", month: "long", year: "numeric" };
+  var lastModifiedDate = new Date(document.lastModified);
+  var date = lastModifiedDate.toLocaleDateString("en-US", options);
+  document.getElementById("date").innerHTML = date;
+</script></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

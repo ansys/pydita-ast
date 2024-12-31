@@ -1,0 +1,71 @@
+
+
+:class:`ArgumentList`
+=====================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.ArgumentList(list_entry: VarlistEntry, args: List)
+
+
+
+.. py:currentmodule:: ArgumentList
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~arguments`
+            - 
+          * - :py:attr:`~initial_args`
+            - 
+          * - :py:attr:`~py_arg_names`
+            - 
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__iadd__`
+            - 
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import ArgumentList
+
+Property detail
+---------------
+.. py:property:: arguments
+
+.. py:property:: initial_args
+
+.. py:property:: py_arg_names
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: __iadd__(argument_list)
+
+

@@ -1,0 +1,6 @@
+﻿get\_docstring\_lists
+=====================
+
+.. currentmodule:: pydita_ast.custom_functions
+
+.. autofunction:: get_docstring_lists

@@ -1,0 +1,6 @@
+path
+====
+
+.. currentmodule:: pydita_ast.custom_functions
+
+.. autoproperty:: CustomFunctions.path

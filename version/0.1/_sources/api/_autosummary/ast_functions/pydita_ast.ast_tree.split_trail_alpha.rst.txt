@@ -1,0 +1,6 @@
+﻿split\_trail\_alpha
+===================
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autofunction:: split_trail_alpha

@@ -1,0 +1,6 @@
+xml\_filename
+=============
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: OxygenXmlTree.xml_filename

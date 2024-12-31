@@ -1,0 +1,6 @@
+targetdoc
+=========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoproperty:: OLink.targetdoc

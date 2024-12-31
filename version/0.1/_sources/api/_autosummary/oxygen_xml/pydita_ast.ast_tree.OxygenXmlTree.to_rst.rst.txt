@@ -1,0 +1,6 @@
+to\_rst
+=======
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. automethod:: OxygenXmlTree.to_rst

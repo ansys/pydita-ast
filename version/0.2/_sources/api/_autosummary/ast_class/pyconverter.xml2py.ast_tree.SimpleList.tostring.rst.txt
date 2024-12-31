@@ -1,0 +1,6 @@
+tostring
+========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: SimpleList.tostring

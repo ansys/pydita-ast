@@ -1,0 +1,65 @@
+﻿Code
+====
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoclass:: Code
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Code.find
+      
+      
+      Code.find_all
+      
+      
+      Code.get
+      
+      
+      Code.has_children
+      
+      
+      Code.print_tree
+      
+      
+      Code.rec_find
+      
+      
+      Code.to_rst
+      
+      
+      Code.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Code.added
+      Code.any_isalnum
+      Code.children
+      Code.content
+      Code.id
+      Code.next_elem
+      Code.prev_elem
+      Code.raw
+      Code.tag
+      Code.tail
+      Code.text_content
+      Code.title
+      Code.tostring
+   
+   

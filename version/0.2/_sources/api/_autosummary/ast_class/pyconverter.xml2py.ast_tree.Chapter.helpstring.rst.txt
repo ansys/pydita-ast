@@ -1,0 +1,6 @@
+helpstring
+==========
+
+.. currentmodule:: pyconverter.xml2py.ast_tree
+
+.. autoproperty:: Chapter.helpstring

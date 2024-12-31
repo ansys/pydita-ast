@@ -1,0 +1,65 @@
+﻿UserInput
+=========
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: UserInput
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      UserInput.find
+      
+      
+      UserInput.find_all
+      
+      
+      UserInput.get
+      
+      
+      UserInput.has_children
+      
+      
+      UserInput.print_tree
+      
+      
+      UserInput.rec_find
+      
+      
+      UserInput.to_rst
+      
+      
+      UserInput.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      UserInput.added
+      UserInput.any_isalnum
+      UserInput.children
+      UserInput.content
+      UserInput.id
+      UserInput.next_elem
+      UserInput.prev_elem
+      UserInput.raw
+      UserInput.tag
+      UserInput.tail
+      UserInput.text_content
+      UserInput.title
+      UserInput.tostring
+   
+   

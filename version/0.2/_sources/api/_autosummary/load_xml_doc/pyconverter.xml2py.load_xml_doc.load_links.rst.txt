@@ -1,0 +1,6 @@
+﻿load\_links
+===========
+
+.. currentmodule:: pyconverter.xml2py.load_xml_doc
+
+.. autofunction:: load_links

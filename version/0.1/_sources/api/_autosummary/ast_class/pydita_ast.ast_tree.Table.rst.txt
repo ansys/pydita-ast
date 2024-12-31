@@ -1,0 +1,66 @@
+﻿Table
+=====
+
+.. currentmodule:: pydita_ast.ast_tree
+
+.. autoclass:: Table
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Table.find
+      
+      
+      Table.find_all
+      
+      
+      Table.get
+      
+      
+      Table.has_children
+      
+      
+      Table.print_tree
+      
+      
+      Table.rec_find
+      
+      
+      Table.to_rst
+      
+      
+      Table.types_repr
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      Table.added
+      Table.any_isalnum
+      Table.children
+      Table.content
+      Table.id
+      Table.next_elem
+      Table.prev_elem
+      Table.raw
+      Table.tag
+      Table.tail
+      Table.text_content
+      Table.tgroup
+      Table.title
+      Table.tostring
+   
+   

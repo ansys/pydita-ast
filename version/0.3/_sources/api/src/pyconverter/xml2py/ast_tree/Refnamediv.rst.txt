@@ -1,0 +1,142 @@
+
+
+:class:`Refnamediv`
+===================
+
+.. py:class:: src.pyconverter.xml2py.ast_tree.Refnamediv(element, terms=None)
+
+   Bases: :py:obj:`Element`
+
+
+   
+   Provides the refnamediv element, which contains the name,
+   purpose, and classification of a reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Refnamediv
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~terms`
+            - Terms of the element.
+          * - :py:attr:`~refname`
+            - Refname of the element.
+          * - :py:attr:`~purpose`
+            - Refpurpose of the element.
+
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from src.pyconverter.xml2py.ast_tree import Refnamediv
+
+Property detail
+---------------
+.. py:property:: terms
+   
+   Terms of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: refname
+   
+   Refname of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: purpose
+   
+   Refpurpose of the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
