@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -27,7 +27,7 @@ import pytest
 
 @pytest.mark.parametrize(
     "initial_name,expected_output",
-    [("/PREP7", "prep7"), ("*DMAT", "dmat"), ("SORT", "sort"), ("*GO", "stargo")],
+    [("/PREP7", "prep7"), ("*DMAT", "dmat"), ("SORT", "sort"), ("*VPLOT", "starvplot")],
 )
 def test_py_name(initial_name, expected_output, name_map):
     assert ast.to_py_name(initial_name, name_map) == expected_output

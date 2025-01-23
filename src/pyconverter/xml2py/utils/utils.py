@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -20,11 +20,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import logging
 from pathlib import Path
 from typing import Tuple, Union
 
 from lxml.html import fromstring
 import yaml
+
+logger = logging.getLogger("py_asciimath.utils")
+logger.setLevel(logging.INFO)
 
 
 def parse_yaml(yaml_path: Path) -> dict:
@@ -64,6 +68,38 @@ def get_config_data_value(yaml_path: Path, value: str) -> Union[str, dict, list,
     return config_data.get(value)
 
 
+def get_warning_command_dict(yaml_path: Path) -> dict:
+    """
+    Get the list of commands that will raise a warning.
+
+    Parameters
+    ----------
+    yaml_path: Path
+        Path object of the YAML file.
+    """
+    warnings_ = get_config_data_value(yaml_path, "warnings")
+    if warnings_ is None:
+        logger.info("No warning commands found in the YAML file.")
+        return {}
+    warning_command_dict = {}
+    for warning_ in warnings_:
+        message = warning_["msg"]
+        commands = warning_["commands"]
+        for command in commands:
+            try:
+                warning_command_dict[command].append(message)
+            except KeyError:
+                warning_command_dict[command] = [message]
+
+    if warning_command_dict == {}:
+        logger.info("No warning commands found in the YAML file.")
+
+    else:
+        logger.info("Warning commands found in the YAML file.")
+
+    return warning_command_dict
+
+
 def create_name_map(meta_command: list[str], yaml_file_path: Path) -> dict:
     """
     Create a mapping between the initial command name and the Python function name.
@@ -84,6 +120,7 @@ def create_name_map(meta_command: list[str], yaml_file_path: Path) -> dict:
     naive_names = []
     rules = get_config_data_value(yaml_file_path, "rules")
     specific_command_mapping = get_config_data_value(yaml_file_path, "specific_command_mapping")
+    ignored_commands = get_config_data_value(yaml_file_path, "ignored_commands")
     for ans_name in meta_command:
         ans_name = ans_name.lower()
         if not ans_name[0].isalnum():
@@ -95,7 +132,9 @@ def create_name_map(meta_command: list[str], yaml_file_path: Path) -> dict:
 
     # second pass for each name
     for ans_name in meta_command:
-        if ans_name in specific_command_mapping:
+        if ans_name in ignored_commands:
+            continue
+        elif ans_name in specific_command_mapping:
             py_name = specific_command_mapping[ans_name]
         else:
             lower_name = ans_name.lower()

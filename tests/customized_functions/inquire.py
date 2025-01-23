@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -56,6 +56,7 @@ def inquire(self, strarray="", func="", arg1="", arg2=""):
     The ``/INQUIRE`` command is valid in any processor.
 
     .. warning::
+
        Take note that from version 0.60.4 and later, the command behaviour
        has been changed.
        Previously, the ``StrArray`` argument was omitted. For example:

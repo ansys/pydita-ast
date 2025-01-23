@@ -65,6 +65,10 @@ intersphinx_mapping = {
     #     "grpc": ("https://grpc.github.io/grpc/python/", None),
 }
 
+suppress_warnings = [
+    "misc.highlighting_failure",  # Suppress highlighting failures
+]
+
 # Copy button customization ---------------------------------------------------
 # exclude traditional Python prompts from the copied code
 copybutton_prompt_text = r">>> ?|\.\.\. "
@@ -77,7 +81,7 @@ numpydoc_validate = True
 numpydoc_validation_checks = {
     "GL06",  # Found unknown section
     "GL07",  # Sections are in the wrong order.
-    "GL08",  # The object does not have a docstring
+    # "GL08",  # The object does not have a docstring
     "GL09",  # Deprecation warning should precede extended summary
     "GL10",  # reST directives {directives} must be followed by two colons
     "SS01",  # No summary found

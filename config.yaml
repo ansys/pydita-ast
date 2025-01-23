@@ -1,8 +1,10 @@
+project_name: PyConverter-GeneratedCommands # Name of the project
+
 library_name_structured: # Future name of the library
   - pyconverter
   - generatedcommands
 
-subfolder:
+subfolders:
   - subfolder
   - subsubfolder
 
@@ -18,20 +20,48 @@ specific_command_mapping:
   "/INQUIRE": inquire
 
 ignored_commands:
-  - "*VWR"
-  - "*MWR"
-  - "C***"
-  - "*CFO"
-  - "*CRE"
-  - "*END"
-  - "/EOF"
+  # Non-available commands - PyMAPDL user guide
   - "*ASK"
-  - "*IF"
+  - "*VEDIT"
+  - "/ERASE"
+  - "ERASE"
+  - "HELP"
+  - "HELPDISP"
+  - "NOERASE"
+  - "*CYCLE"
+  - "*DO"
+  - "*DOWHILE"
   - "*ELSE"
-  - "CMAT"
-  - "*REP"
+  - "*ELSEIF"
+  - "*ENDDO"
+  - "*ENDIF"
+  - "*GO"
+  - "*IF"
+  - "*REPEAT"
   - "*RETURN"
-  - "LSRE"
+  - "*DEL"
+  - "/BATCH"
+  - "/EOF"
+  - "UNDO"
+  # Additional commands to ignore
+  - "C***"
+  - "/DIRECTORY" # Defined in ``mapdl_core.py``
+  - "*XPL" # Defined in ``mapdl_grpc.py``
+
+warnings:
+  - msg: 'This command must be run using :func:`non_interactive <ansys.mapdl.core.Mapdl.non_interactive>
+
+    Please visit `Unsupported Interactive Commands <https://mapdl.docs.pyansys.com/version/stable/user_guide/mapdl.html#unsupported-interactive-commands>`_
+    
+    for further information.'
+    commands:
+      - "*CREATE"
+      - "CFOPEN"
+      - "CFCLOSE"
+      - "*VWRITE"
+      - "*MWRITE"
+      - "LSWRITE"
+      - "LSREAD"
 
 
 specific_classes:

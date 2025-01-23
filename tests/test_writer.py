@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -26,7 +26,7 @@ import pyconverter.xml2py.writer as wrt
 import pytest
 
 
-def test_convert(command_map, custom_functions):
+def test_convert(command_map, custom_functions, warning_command_dict):
     assert command_map["/XFRM"].name == "/XFRM"
     assert (
         "Original command: WRITE\n\nShort Description:\nWrites the radiation matrix file.\n\nFunction signature:\nWRITE,"  # noqa : E501
@@ -39,9 +39,9 @@ def test_convert(command_map, custom_functions):
     assert 'def zoom(self, wn: str = "", lab: str = "", x1: str = "", y1: str = "", x2: str = "", y2: str = "", **kwargs):\n    r"""Zooms a region of a display window.\n\n' in command_map[  # noqa : E501
         "/ZOOM"
     ].to_python(
-        custom_functions
+        custom_functions, warning_command_dict
     )
-    assert "import re" in command_map["K"].to_python(custom_functions)
+    assert "import re" in command_map["K"].to_python(custom_functions, warning_command_dict)
 
 
 def test_copy_template_package(cwd):

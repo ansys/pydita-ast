@@ -7,10 +7,10 @@ function Green
 
 deactivate
 cd .\package\
-python -m venv .venv
+uv venv .venv --seed
 .\.venv\Scripts\activate
  Write-Output "A new virtual environment has been created within the package folder." | Green
-pip install -e .[doc]
+uv pip install -e .[doc]
  Write-Output "The package has successfully been installed in the virtual environment." | Green
  Write-Output "The documentation is about to be built." | Green
 .\doc\make.bat html

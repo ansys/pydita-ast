@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -20,10 +20,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+GET_BOLD_COMMANDS = r"([^\*])(\*\*)(\*)(.*?)(\*\*)([^\*])"
 BEFORE_DEF = r"[\s\S]*?(?=def "
-GET_GROUP = r"(?<=&)(.*?)(?=;)"
 GET_CLASSNAME = r"(\S+)(?=:)"
+GET_CODE_BLOCK = r"(\s*\.\. code:: apdl\n\s*(?: +.+\n)+)"
+GET_GROUP = r"(?<=&)(.*?)(?=;)"
+# Not used, can be added in case of complications with imports in the future
+GET_IMPORTS = r"(?:(?:from [a-zA-Z0-9_.]* import [a-zA-Z0-9_.]* as [a-zA-Z0-9_.]*)|(?:from [a-zA-Z0-9_.]* import [a-zA-Z0-9_.]*)|(?:import [a-zA-Z0-9_.]* as [a-zA-Z0-9_.]*)|(?:import [a-zA-Z0-9_.]*)\s)"  # noqa: E501
+GET_ITALIC_COMMANDS = r"([^\*])(\*)(\*)([A-Z]+)(\*)([^\*])"  # TODO: Not supported yet
+GET_STAR_COMMANDS = r"([^\*])(\*)([A-Z]+)(\`|\,|\.|\s)"
+GET_STAR_FUNCTIONS = r"([^\*\s\\]+)(\*)([^\*\s]+)"
 GET_TYPENAME_1OPT = r"(?<=:)(.*)"
 GET_TYPENAME_2OPT = r"(?<=:)(.*?)(?=[A-Z][A-Z])"
-# Not used for now, can be added in case of complications with imports in the future
-GET_IMPORTS = r"(?:(?:from [a-zA-Z0-9_.]* import [a-zA-Z0-9_.]* as [a-zA-Z0-9_.]*)|(?:from [a-zA-Z0-9_.]* import [a-zA-Z0-9_.]*)|(?:import [a-zA-Z0-9_.]* as [a-zA-Z0-9_.]*)|(?:import [a-zA-Z0-9_.]*)\s)"  # noqa: E501
+REPLACE_BOLD_COMMANDS = r"\1\2" + r"\*" + r"\4\5\6"
+REPLACE_ITALIC_COMMANDS = r"\1\2" + r"\*" + r"\4\5\6"  # TODO: Not supported yet
+REPLACE_STAR_COMMANDS = r"\1" + r"\*" + r"\3\4"
+REPLACE_STAR_FUNCTIONS = r"\1\\2\3"

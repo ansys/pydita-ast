@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -105,6 +105,10 @@ def create_package(
             download.download_template()
 
     command_map, name_map = wr.convert(xml_path)
+    arg_file = Path("args.txt")
+    if arg_file.exists():
+        # Delete the file if it exists
+        arg_file.unlink()
     package_structure = wr.write_source(
         command_map, name_map, xml_path, target_path, custom_functions_path
     )
